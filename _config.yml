@@ -20,9 +20,9 @@ github_username:  jekyll
 google_analytic_id:
 disqus_name:
 
-permalink: none
+permalink: /:categories/:title
 paginate: 5
-paginate_path: "/page/:num/"
+paginate_path: /page/:num
 
 # Build settings
 markdown: kramdown
