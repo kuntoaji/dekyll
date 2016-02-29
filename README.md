@@ -21,3 +21,4 @@ All configuration is under `_config.yml` file, except the search. Dekyll uses Go
 * Support redirection
 * Social media sharing buttons
 * Google Analytic and Disqus
+* Jekyll SEO tag
