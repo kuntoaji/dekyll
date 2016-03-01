@@ -9,6 +9,7 @@ All configuration is under `_config.yml` file, except the search. Dekyll uses Go
 * jekyll-sitemap
 * jekyll-paginate
 * jekyll-redirect-from
+* jekyll-seo-tag
 
 ### Features
 * Support Jekyll 3
