@@ -58,7 +58,11 @@ p {
 
 #cse-search-box {
   position: relative;
-  margin-top: 8px;
+  width: 48%;
+  margin-top: 15px;
+  margin-left: 15px;
+  margin-right: 5px;
+  float: left;
 
   [name="q"] {
     -webkit-appearance: none;
@@ -73,7 +77,7 @@ p {
     border: 1px solid gainsboro;
     box-sizing: border-box;
     display: block;
-    font-size: 0.8em;
+    font-size: 0.6em;
     margin: 0;
     padding: 0.5em;
     position: relative;
@@ -210,15 +214,21 @@ ul.share-buttons li {
   margin-right: 5px;
 }
 
-.post-content img {
-  border-radius: 2px 2px 2px 2px;
-  -moz-border-radius: 2px 2px 2px 2px;
-  -webkit-border-radius: 2px 2px 2px 2px;
-  border: 1px solid rgba(170, 170, 170, 0.75);
-  -webkit-box-shadow: 8px 8px 10px 0px rgba(170,170,170,0.75);
-  -moz-box-shadow: 8px 8px 10px 0px rgba(170,170,170,0.75);
-  box-shadow: 8px 8px 10px 0px rgba(170,170,170,0.75);
-  width: 100%;
+.post-content {
+  img {
+    border-radius: 2px 2px 2px 2px;
+    -moz-border-radius: 2px 2px 2px 2px;
+    -webkit-border-radius: 2px 2px 2px 2px;
+    border: 1px solid rgba(170, 170, 170, 0.75);
+    -webkit-box-shadow: 8px 8px 10px 0px rgba(170,170,170,0.75);
+    -moz-box-shadow: 8px 8px 10px 0px rgba(170,170,170,0.75);
+    box-shadow: 8px 8px 10px 0px rgba(170,170,170,0.75);
+    width: 100%;
+  }
+
+  p {
+    line-height: 1.6em;
+  }
 }
 
 @-webkit-keyframes fadeIn { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
@@ -238,4 +248,21 @@ ul.share-buttons li {
   -webkit-animation-duration: 1s;
   -moz-animation-duration: 1s;
   animation-duration: 1s;
+}
+
+
+.site-title {
+  font-size: 22px;
+}
+
+.site-nav .page-link {
+  font-size: 18px;
+}
+
+body {
+  font-family: 'Merriweather', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
