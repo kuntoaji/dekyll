@@ -13,7 +13,7 @@ All configuration is under `_config.yml` file.
 
 ### Features
 * Support Jekyll 3
-* No Javascript (by default)
+* No Javascript required
 * CSS Compression
 * Related articles
 * Responsive
@@ -23,3 +23,10 @@ All configuration is under `_config.yml` file.
 * Social media sharing buttons
 * Google Analytic and Disqus
 * Jekyll SEO tag
+
+### How to Build
+Google Analytic and Disqus are only rendered in production environment, you must set `JEKYLL_ENV=production` when building Dekyll.
+
+```
+JEKYLL_ENV=production jekyll build
+```
