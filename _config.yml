@@ -24,7 +24,7 @@ paginate: 5
 paginate_path: /page/:num
 
 # jekyll seo tag settings
-logo: assets/images/search-icon-black.png
+logo: assets/images/example-image.png
 twitter:
   username: jekyllrb
 

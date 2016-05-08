@@ -56,55 +56,6 @@ p {
   color: $text-color;
 }
 
-#cse-search-box {
-  position: relative;
-  width: 48%;
-  margin-top: 15px;
-  margin-left: 15px;
-  margin-right: 5px;
-  float: left;
-
-  [name="q"] {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    -ms-appearance: none;
-    -o-appearance: none;
-    appearance: none;
-    -webkit-transition: border-color;
-    -moz-transition: border-color;
-    transition: border-color;
-    background-color: white;
-    border: 1px solid gainsboro;
-    box-sizing: border-box;
-    display: block;
-    font-size: 0.6em;
-    margin: 0;
-    padding: 0.5em;
-    position: relative;
-    width: 100%;
-  }
-
-  [name="sa"] {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    -ms-appearance: none;
-    -o-appearance: none;
-    position: absolute;
-    top: 0em;
-    right: 0em;
-    bottom: 0em;
-    outline: none;
-    padding: 5px 10px;
-    border: none;
-    background: lightgrey;
-
-    img {
-      height: 12px;
-      opacity: 0.7;
-    }
-  }
-}
-
 table {
   border-collapse: separate;
   border-left: 0px;
