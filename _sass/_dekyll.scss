@@ -341,3 +341,17 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #075683;
   border-color: #075683;
 }
+
+h1.post-title, h1 .post-link {
+  color: #333;
+  font-weight: bold;
+}
+
+.post-list h1 {
+  margin-bottom: 5px;
+}
+
+h1 .post-link {
+  font-size: 32px;
+  line-height: 40px;
+}
