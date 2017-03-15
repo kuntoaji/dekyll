@@ -352,3 +352,16 @@ h1 .post-link {
   font-size: 32px;
   line-height: 40px;
 }
+
+.related-posts {
+  background: #f6f6f6;
+  border-radius: 4px;
+  margin-left: 0;
+  padding: 20px;
+  margin-bottom: 20px;
+
+  a {
+    color: #333;
+    font-weight: bold;
+  }
+}
