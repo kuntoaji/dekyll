@@ -2,60 +2,6 @@ p {
   margin-bottom: 30px;
 }
 
-.pagination {
-  font-size: smaller;
-  padding-bottom: 10px;
-
-  .previous, .next {
-    width: 40%;
-    float: left;
-  }
-
-  .previous {
-    text-align: left;
-  }
-
-  .center {
-    width: 20%;
-    float: left;
-    text-align: center;
-  }
-
-  .next {
-    text-align: right;
-  }
-
-  &:after {
-    clear: both;
-  }
-}
-
-.pagination-post {
-  font-size: smaller;
-  padding-bottom: 10px;
-
-  .previous, .next {
-    width: 50%;
-    float: left;
-  }
-
-  .previous {
-    text-align: left;
-  }
-
-  .next {
-    text-align: right;
-  }
-
-  &:after {
-    clear: both;
-  }
-}
-
-.page_number {
-  color: $text-color;
-}
-
 table {
   border-collapse: separate;
   border-left: 0px;
@@ -364,4 +310,89 @@ h1 .post-link {
     color: #333;
     font-weight: bold;
   }
+}
+
+.border-box {
+  box-sizing: border-box;
+}
+
+.ba {
+  border-style: solid;
+  border-width: 1px;
+}
+
+.flex {
+  display: flex;
+}
+
+.inline-flex {
+  display: inline-flex;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.w1 {
+  width: 1rem;
+}
+
+.black {
+  color: #000;
+}
+
+.black:visited {
+  color: #000;
+}
+
+.hover-white:hover {
+  color: #fff;
+}
+
+.hover-white:focus {
+  color: #fff;
+}
+
+.hover-bg-black:hover {
+  background-color: #000;
+}
+
+.hover-bg-black:focus {
+  background-color: #000;
+}
+
+.pa3 {
+  padding: 1rem;
+}
+
+.pa4 {
+  padding: 2rem;
+}
+
+.pl1 {
+  padding-left: .25rem;
+}
+
+.pr1 {
+  padding-right: .25rem;
+}
+
+.mr4 {
+  margin-right: 2rem;
+}
+
+.no-underline {
+  text-decoration: none;
+}
+
+.f5 {
+  font-size: 1rem;
+}
+
+.bg-animate, .bg-animate:hover, .bg-animate:focus {
+  transition: background-color .15s ease-in-out;
 }
