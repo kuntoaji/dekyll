@@ -121,7 +121,7 @@ ul.share-buttons li {
   }
 
   p {
-    line-height: 1.6em;
+    line-height: 1.6;
   }
 }
 
@@ -305,6 +305,7 @@ h1 .post-link {
   margin-left: 0;
   padding: 20px;
   margin-bottom: 20px;
+  box-shadow: 0 1px 3px rgba(0,0,0,.12), 0 1px 2px rgba(0,0,0,.24);
 
   a {
     color: #333;
