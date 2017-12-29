@@ -287,6 +287,9 @@ h1, h2, h3, h4, h5, h6 {
 
 h1.post-title, h1 .post-link {
   color: #333;
+}
+
+h1 .post-link {
   font-weight: bold;
 }
 
@@ -306,11 +309,6 @@ h1 .post-link {
   padding: 20px;
   margin-bottom: 20px;
   box-shadow: 0 1px 3px rgba(0,0,0,.12), 0 1px 2px rgba(0,0,0,.24);
-
-  a {
-    color: #333;
-    font-weight: bold;
-  }
 }
 
 .border-box {
