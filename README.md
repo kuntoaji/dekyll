@@ -2,6 +2,7 @@
 
 Jekyll theme based on default Jekyll's default style. [Demo Dekyll Theme](http://www.kaklabs.com).
 
+Supported Jekyll version: 3.0.X - 3.4.X.
 All configuration is under `_config.yml` file.
 
 ### Dependencies
