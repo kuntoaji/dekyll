@@ -303,7 +303,8 @@ h1 .post-link {
 
 h1 .post-link {
   font-size: 32px;
-  line-height: 40px;
+  line-height: 1.25;
+  text-shadow: white 1px 0px 0px, white -1px 0px 0px;
 }
 
 .related-posts {
