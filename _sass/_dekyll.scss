@@ -316,87 +316,44 @@ h1 .post-link {
   box-shadow: 0 1px 3px rgba(0,0,0,.12), 0 1px 2px rgba(0,0,0,.24);
 }
 
-.border-box {
-  box-sizing: border-box;
-}
-
-.ba {
-  border-style: solid;
-  border-width: 1px;
-}
-
-.flex {
+.pagination {
   display: flex;
-}
-
-.inline-flex {
-  display: inline-flex;
-}
-
-.items-center {
   align-items: center;
-}
-
-.justify-center {
   justify-content: center;
-}
-
-.w1 {
-  width: 1rem;
-}
-
-.black {
-  color: #000;
-}
-
-.black:visited {
-  color: #000;
-}
-
-.hover-white:hover {
-  color: #fff;
-}
-
-.hover-white:focus {
-  color: #fff;
-}
-
-.hover-bg-black:hover {
-  background-color: #000;
-}
-
-.hover-bg-black:focus {
-  background-color: #000;
-}
-
-.pa3 {
-  padding: 1rem;
-}
-
-.pa4 {
   padding: 2rem;
-}
 
-.pl1 {
-  padding-left: .25rem;
-}
+  &__previous, &__previous--edge, &__next, &__next--edge {
+    font-size: 1rem;
+    text-decoration: none;
+    color: #000;
+    transition: background-color .15s ease-in-out;
+    display: inline-flex;
+    align-items: center;
+    padding: 1rem;
+    border-style: solid;
+    border-width: 1px;
+    box-sizing: border-box;
+    margin-right: 2rem;
+  }
 
-.pr1 {
-  padding-right: .25rem;
-}
+  &__previous:visited, &__next:visited {
+    color: #000;
+  }
 
-.mr4 {
-  margin-right: 2rem;
-}
+  &__previous:hover, &__previous:focus, &__next:hover, &__next:focus {
+    background-color: #000;
+    color: #fff;
+  }
 
-.no-underline {
-  text-decoration: none;
-}
+  &__icon {
+    width: 1rem;
+  }
 
-.f5 {
-  font-size: 1rem;
-}
+  &__previous-text {
+    padding-left: .25rem;
+  }
 
-.bg-animate, .bg-animate:hover, .bg-animate:focus {
-  transition: background-color .15s ease-in-out;
+  &__next-text {
+    padding-right: .25rem;
+  }
 }
