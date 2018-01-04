@@ -119,10 +119,6 @@ ul.share-buttons li {
     border-radius: 5px;
     width: 100%;
   }
-
-  p {
-    line-height: 1.6;
-  }
 }
 
 @-webkit-keyframes fadeIn { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
@@ -165,6 +161,11 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
 }
 
+body {
+  @include media-query($on-palm) {
+    font-size: 16px;
+  }
+}
 
 .resp-sharing-button {
   display: inline-block;
@@ -295,6 +296,26 @@ h1.post-title, h1 .post-link {
 
 h1 .post-link {
   font-weight: bold;
+}
+
+h1.post-title {
+  @include media-query($on-palm) {
+    font-size: 28px;
+  }
+}
+
+.post-content h2 {
+  line-height: 1.25;
+
+  @include media-query($on-palm) {
+    font-size: 24px;
+  }
+}
+
+.post-content h2 {
+  @include media-query($on-palm) {
+    font-size: 20px;
+  }
 }
 
 .post-list h1 {
