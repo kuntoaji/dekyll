@@ -2,8 +2,14 @@
 
 Jekyll theme based on default Jekyll's default style. [Demo Dekyll Theme](http://www.kaklabs.com).
 
-Supported Jekyll version: 3.0.X - 3.4.X.
-All configuration is under `_config.yml` file.
+Tested with:
+* jekyll 3.4.5
+* jekyll-redirect-from 0.12.1
+* jekyll-seo-tag 2.2.3
+* jekyll-paginate-v2 1.9.0
+* jekyll-archives 2.1.1
+
+All configurations are under `_config.yml` file.
 
 ### Dependencies
 * jekyll 3
