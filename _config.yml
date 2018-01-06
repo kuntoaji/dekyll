@@ -20,8 +20,21 @@ google_analytic_id:
 disqus_name:
 
 permalink: /:categories/:title
-paginate: 5
-paginate_path: /page/:num
+pagination:
+  enabled: true
+  per_page: 5
+  permalink: '/page/:num'
+  title: ':title - page :num'
+  sort_reverse: true
+
+autopages:
+  enabled: true
+  categories:
+    title: 'Posts in category :cat'
+  tags:
+    title: 'Posts tagged with :tag'
+  collections:
+    title: 'Posts in collection :coll'
 
 # jekyll seo tag settings
 logo: assets/images/example-image.png
@@ -35,6 +48,7 @@ sass:
 
 gems:
   - jekyll-sitemap
-  - jekyll-paginate
   - jekyll-redirect-from
   - jekyll-seo-tag
+  - jekyll-paginate-v2
+  - jekyll-archives
