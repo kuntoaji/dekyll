@@ -372,3 +372,32 @@ h1 .post-link {
     padding-right: .25rem;
   }
 }
+
+.tag {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0;
+
+  &__item {
+    display: inline-block;
+    margin-right: 0.75rem;
+  }
+}
+
+.category {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0;
+  margin-bottom: 0;
+  font-size: 17.5px;
+  color: #828282;
+
+  &__item, &__label {
+    display: inline-block;
+    margin-right: 0.25rem;
+  }
+
+  &__item:not(:last-of-type)::after {
+    content: ', '
+  }
+}
