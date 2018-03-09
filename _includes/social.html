@@ -1,3 +1,4 @@
+{% if site.social_sharing %}
 {% assign shared_url = page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url %}
 {% assign shared_text = page.title %}
 
@@ -79,3 +80,4 @@
     </a>
   </li>
 </ul>
+{% endif %}

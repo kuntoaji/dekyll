@@ -15,6 +15,7 @@ description: > # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://yourdomain.com" # the base hostname & protocol for your site
 
+social_sharing: true
 github_username:  jekyll
 google_analytic_id:
 disqus_name:
