@@ -5,11 +5,10 @@ Jekyll theme based on default Jekyll's default style. [Demo Dekyll Theme](http:/
 All configurations are under `_config.yml` file.
 
 ### Dependencies
-* jekyll 3.4.5
-* jekyll-redirect-from 0.12.1
-* jekyll-seo-tag 2.2.3
-* jekyll-paginate-v2 1.9.0
-* jekyll-archives 2.1.1
+* jekyll 3.8.0
+* jekyll-sitemap 1.2.0
+* jekyll-seo-tag 2.4.0
+* jekyll-paginate-v2 1.9.4
 
 ### Features
 * Support Jekyll 3
@@ -19,7 +18,6 @@ All configurations are under `_config.yml` file.
 * Responsive
 * Support pagination
 * Sitemap
-* Support redirection
 * Social media sharing buttons
 * Google Analytic and Disqus
 * Jekyll SEO tag

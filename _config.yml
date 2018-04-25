@@ -24,7 +24,7 @@ permalink: /:categories/:title
 pagination:
   enabled: true
   per_page: 5
-  permalink: '/page/:num'
+  permalink: '/page/:num.html'
   title: ':title - page :num'
   sort_reverse: true
 
@@ -46,10 +46,3 @@ twitter:
 markdown: kramdown
 sass:
   style: compressed
-
-gems:
-  - jekyll-sitemap
-  - jekyll-redirect-from
-  - jekyll-seo-tag
-  - jekyll-paginate-v2
-  - jekyll-archives
