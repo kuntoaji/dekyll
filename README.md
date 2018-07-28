@@ -1,6 +1,10 @@
 # Dekyll
 
-Jekyll theme based on default Jekyll's default style. [Demo Dekyll Theme](http://www.kaklabs.com).
+Jekyll theme based on default Jekyll's default style.
+
+### Demo
+* [KAK Labs](https://www.kaklabs.com)
+* [Railsmine](https://www.railsmine.net)
 
 All configurations are under `_config.yml` file.
 
