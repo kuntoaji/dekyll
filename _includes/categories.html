@@ -1,6 +1,6 @@
 <ul class="category">
   <li class="category__label">Categories: </li>
   {% for category in page.categories %}
-    <li class="category__item"><a href="{{ site.url }}/category/{{ category }}" title="{{ category }}">{{ category }}</a></li>
+    <li class="category__item"><a href="{{ site.url }}/category/{{ category | downcase }}" title="{{ category }}">{{ category }}</a></li>
   {% endfor %}
 </ul>
