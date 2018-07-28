@@ -1,12 +1,10 @@
 # Dekyll
 
-Jekyll theme based on default Jekyll's default style.
+Jekyll theme based on default Jekyll's default style. All configurations are under `_config.yml` file. Dekyll does not compatible with Github Pages and in the future will re-architecture as gem-based theme.
 
 ### Demo
 * [KAK Labs](https://www.kaklabs.com)
 * [Railsmine](https://www.railsmine.net)
-
-All configurations are under `_config.yml` file.
 
 ### Dependencies
 * jekyll 3.8.0
