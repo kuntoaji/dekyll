@@ -1,6 +1,6 @@
 # Dekyll
 
-Jekyll theme based on default Jekyll's default style. All configurations are under `_config.yml` file. Dekyll does not compatible with Github Pages and in the future will re-architecture as gem-based theme.
+Jekyll theme based on default Jekyll's default style. All configurations are under `_config.yml` file. By default, Dekyll does not compatible with Github Pages. You need to build locally and push to Github repository if you want to use Dekyll with Github Pages. In the future Dekyll will re-architecture as gem-based theme.
 
 ### Demo
 * [KAK Labs](https://www.kaklabs.com)
@@ -19,7 +19,7 @@ Jekyll theme based on default Jekyll's default style. All configurations are und
 * Related articles
 * Responsive
 * Support pagination
-* Sitemap
+* Sitemap with Last-Modified-At
 * Social media sharing buttons
 * Google Analytic and Disqus
 * Jekyll SEO tag
