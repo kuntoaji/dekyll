@@ -1,6 +1,6 @@
 <div class="pagination">
-  {% if page.previous.url %}
-    <a href="{{ page.previous.url }}" class="pagination__previous">
+  {% if page.next.url %}
+    <a href="{{ page.next.url }}" class="pagination__previous">
         <svg class="pagination__icon" data-icon="chevronLeft" viewBox="0 0 32 32" style="fill:currentcolor">
           <title>chevronLeft icon</title>
           <path d="M20 1 L24 5 L14 16 L24 27 L20 31 L6 16 z"></path>
@@ -12,8 +12,8 @@
       <span class="pagination__previous-text">Previous</span>
     </span>
   {% endif %}
-  {% if page.next.url %}
-    <a href="{{ page.next.url }}" class="pagination__next">
+  {% if page.previous.url %}
+    <a href="{{ page.previous.url }}" class="pagination__next">
       <span class="pagination__next-text">Next</span>
       <svg class="pagination__icon" data-icon="chevronRight" viewBox="0 0 32 32" style="fill:currentcolor">
         <title>chevronRight icon</title>
