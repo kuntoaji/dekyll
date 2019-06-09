@@ -1,16 +1,19 @@
 # Dekyll
 
-Jekyll theme based on default Jekyll's default style. All configurations are under `_config.yml` file. By default, Dekyll does not compatible with Github Pages. You need to build locally and push to Github repository if you want to use Dekyll with Github Pages. In the future Dekyll will re-architecture as gem-based theme.
+Jekyll theme based on default Jekyll's default style. All configurations are under `_config.yml` file.
+By default, Dekyll does not compatible with Github Pages.
+You need to build locally and push to Github repository if you want to use Dekyll with Github Pages. In the future Dekyll will re-architecture as gem-based theme.
 
 ### Demo
 * [KAK Labs](https://www.kaklabs.com)
 * [Railsmine](https://www.railsmine.net)
 
 ### Dependencies
-* jekyll 3.8.0
+* jekyll 3.8.5
 * jekyll-sitemap 1.2.0
-* jekyll-seo-tag 2.4.0
-* jekyll-paginate-v2 1.9.4
+* jekyll-seo-tag 2.5.0
+* jekyll-paginate-v2 2.0.0
+* jekyll-last-modified-at 1.0.1
 
 ### Features
 * Support Jekyll 3
