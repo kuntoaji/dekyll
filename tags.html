@@ -1,0 +1,15 @@
+---
+layout: page
+title: Tags
+permalink: tags.html
+show_in_nav: true
+---
+
+<ul class="tag">
+  {% for tag in site.tags %}
+    {% assign tag_name = tag[0] | downcase %}
+    <li class="tag__item"><a href="{{ site.url }}/tag/{{ tag[0] }}/" title="{{ tag_name }}">#{{ tag_name }}</a></li>
+  {% endfor %}
+</ul>
+
+<p>See all <a href="/categories.html">categories</a>.</p>
