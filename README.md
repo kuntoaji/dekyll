@@ -9,14 +9,14 @@ You need to build locally and push to Github repository if you want to use Dekyl
 * [Railsmine](https://www.railsmine.net)
 
 ### Dependencies
-* jekyll 3.8.5
-* jekyll-sitemap 1.2.0
-* jekyll-seo-tag 2.5.0
-* jekyll-paginate-v2 2.0.0
-* jekyll-last-modified-at 1.0.1
+* jekyll 4.0.0
+* jekyll-sitemap 1.4.0
+* jekyll-seo-tag 2.6.1
+* jekyll-paginate-v2 3.0.0
+* jekyll-last-modified-at 1.3.0
 
 ### Features
-* Support Jekyll 3
+* Support Jekyll 4
 * No Javascript required
 * CSS Compression
 * Related articles
