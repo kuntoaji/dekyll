@@ -1,11 +1,3 @@
-a:hover {
-  color: #2a7ae2;
-}
-
-iframe {
-  margin-bottom: 30px;
-}
-
 ul.share-buttons {
   list-style: none;
   padding: 0;
@@ -15,24 +7,6 @@ ul.share-buttons {
 ul.share-buttons li {
   display: inline;
   margin-right: 5px;
-}
-
-.post-content {
-  img {
-    display: block;
-    max-width: 100%;
-    margin: 0 0 1rem;
-    border-radius: 5px;
-    width: 100%;
-  }
-}
-
-.site-title {
-  font-size: 22px;
-}
-
-.site-nav {
-  z-index: 1;
 }
 
 .resp-sharing-button {
@@ -176,10 +150,10 @@ h1 .post-link {
   padding: 20px;
   margin-bottom: 20px;
   box-shadow: 0 1px 3px rgba(0,0,0,.12), 0 1px 2px rgba(0,0,0,.24);
-  font-size: 16px;
+  font-size: $base-font-size - 2px;
 
   @include media-query($on-palm) {
-    font-size: 12px;
+    font-size: $base-font-size - 4px;
   }
 }
 
