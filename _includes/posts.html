@@ -3,7 +3,7 @@
   <ul class="post-list">
     {% for post in paginator.posts %}
       <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+        <time class="post-meta" datetime="{{ post.date | date: "%Y-%m-%d %H:%M" }}">{{ post.date | date: "%b %-d, %Y" }}</time>
 
         <h1>
           <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
