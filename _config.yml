@@ -19,8 +19,8 @@ social_sharing: true
 github_username:  jekyll
 google_analytic_id:
 disqus_name:
+permalink: /:year/:month/:day/:title:output_ext
 
-permalink: /:categories/:title
 pagination:
   enabled: true
   per_page: 5
