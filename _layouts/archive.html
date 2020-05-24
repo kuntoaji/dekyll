@@ -1,0 +1,35 @@
+---
+layout: default
+---
+<article class="post">
+
+  <header class="post-header">
+    {% if page.type == 'year' %}
+      <h1>Archive {{ page.date | date: "%Y" }}</h1>
+    {% elsif page.type == 'month' %}
+      <h1>Archive {{ page.date | date: "%B %Y" }}</h1>
+    {% elsif page.type == 'day' %}
+      <h1>Archive {{ page.date | date: "%B %-d, %Y" }}</h1>
+    {% else %}
+      <h1>Archive with {{ page.type }} '{{ page.title }}'</h1>
+    {% endif %}
+  </header>
+
+  <div class="post-content">
+    <ul class="post-list">
+      {% for post in page.posts %}
+        <li>
+          <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+          <h1>
+            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+          </h1>
+
+          <p>
+            {{ post.excerpt }}
+          </p>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+
+</article>

@@ -37,6 +37,13 @@ autopages:
   collections:
     title: 'Posts in collection :coll'
 
+jekyll-archives:
+  enabled:
+    - year
+    - month
+    - day
+  layout: archive
+
 # jekyll seo tag settings
 logo: assets/images/example-image.png
 twitter:
