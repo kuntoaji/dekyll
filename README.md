@@ -4,9 +4,7 @@ Dekyll is a clean and minimal blog theme for Jekyll based on Minima theme, the J
 By default, Dekyll does not compatible with Github Pages.
 You need to build locally and push to Github repository if you want to use Dekyll with Github Pages. In the future Dekyll will re-architecture as gem-based theme.
 
-## Demo
-* [KAK Labs](https://www.kaklabs.com)
-* [Railsmine](https://www.railsmine.net)
+See [railsmine.net](https://www.railsmine.net) for demo.
 
 ## How to Run Dekyll on local machine
 
