@@ -132,17 +132,6 @@ ul.share-buttons li {
   border-color: #075683;
 }
 
-.post-list h1 {
-  margin-bottom: 5px;
-}
-
-h1 .post-link {
-  font-size: 1.5rem;
-  font-weight: 600;
-  line-height: 1.25;
-  text-shadow: white 1px 0px 0px, white -1px 0px 0px;
-}
-
 .related-posts {
   background: #f6f6f6;
   border-radius: 4px;
@@ -227,4 +216,23 @@ h1 .post-link {
   &__item:not(:last-of-type)::after {
     content: ', '
   }
+}
+
+.video-wrapper {
+  float: none;
+  clear: both;
+  width: 100%;
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 25px;
+  height: 0;
+  margin-bottom: 30px;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }

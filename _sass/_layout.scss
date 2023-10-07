@@ -23,9 +23,8 @@
         color: $grey-color-dark;
     }
     &:hover {
-        color: $site-title-hover-color;
+      color: $site-title-hover-color;
     }
-
 }
 
 .site-nav {
@@ -172,6 +171,10 @@
     margin-left: 0;
     list-style: none;
 
+    h1 {
+      margin-bottom: 5px;
+    }
+
     > li {
         margin-bottom: $spacing-unit;
     }
@@ -184,7 +187,10 @@
 
 .post-link {
     display: block;
-    font-size: 24px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.25;
+    text-shadow: white 1px 0px 0px, white -1px 0px 0px;
 }
 
 
@@ -212,13 +218,5 @@
   h1, h2, h3, h4, h5, h6 {
     margin-top: $spacing-unit;
     margin-bottom: 0;
-  }
-
-  h2 {
-    font-size: 1.25rem;
-  }
-
-  h3, h4 {
-    font-size: 1rem;
   }
 }

@@ -67,48 +67,50 @@ figcaption {
   font-size: $small-font-size;
 }
 
-
-
 /**
  * Lists
  */
 ul, ol {
-    margin-left: $spacing-unit;
+  margin-left: $spacing-unit;
 }
 
 li {
-    > ul,
-    > ol {
-         margin-bottom: 0;
-    }
+  > ul,
+  > ol {
+    margin-bottom: 0;
+  }
 }
-
-
 
 /**
  * Headings
  */
 h1, h2, h3, h4, h5, h6 {
-    font-weight: 600;
+  font-weight: 600;
 }
 
+h2 {
+  font-size: 1.25rem;
+}
 
+h3, h4 {
+  font-size: 1rem;
+}
 
 /**
  * Links
  */
 a {
+  color: $brand-color;
+  text-decoration: none;
+
+  &:visited {
+    color: darken($brand-color, 15%);
+  }
+
+  &:hover {
     color: $brand-color;
-    text-decoration: none;
-
-    &:visited {
-        color: darken($brand-color, 15%);
-    }
-
-    &:hover {
-        color: $brand-color;
-        text-decoration: underline;
-    }
+    text-decoration: underline;
+  }
 }
 
 
@@ -241,9 +243,11 @@ table {
 }
 
 
+
 /**
  * Others
  */
 iframe {
-  margin-bottom: 30px;
+    margin-bottom: 30px;
 }
+
