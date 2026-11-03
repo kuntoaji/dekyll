@@ -133,7 +133,7 @@ ul.share-buttons {
 }
 
 .related-posts {
-  background: #f6f6f6;
+  background: $related-posts-background-color;
   border-radius: 4px;
   margin-left: 0;
   padding: 20px;
@@ -153,9 +153,8 @@ ul.share-buttons {
   padding: 2rem;
 
   &__previous, &__previous--edge, &__next, &__next--edge {
-    font-size: 1rem;
     text-decoration: none;
-    color: #000;
+    color: $pagination-color;
     transition: background-color .15s ease-in-out;
     display: inline-flex;
     align-items: center;
@@ -168,12 +167,12 @@ ul.share-buttons {
   }
 
   &__previous:visited, &__next:visited {
-    color: #000;
+    color: $pagination-color;
   }
 
   &__previous:hover, &__previous:focus, &__next:hover, &__next:focus {
-    background-color: #000;
-    color: #fff;
+    background-color: $pagination-color;
+    color: $pagination-hover-text-color;
   }
 
   &__icon {
@@ -205,11 +204,11 @@ ul.share-buttons {
   padding-left: 0;
   margin-left: 0;
   margin-bottom: 0;
-  font-size: 17.5px;
-  color: #828282;
+  color: $grey-color;
 
   &__item, &__label {
     display: inline-block;
+    margin-bottom: 0;
     margin-right: 0.25rem;
   }
 

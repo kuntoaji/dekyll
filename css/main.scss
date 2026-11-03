@@ -3,29 +3,59 @@
 ---
 @charset "utf-8";
 
+// Relative to /css/main.css so the fonts load under any baseurl
+$font-path: "../assets/fonts";
 
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url("#{$font-path}/PlusJakartaSans-VariableFont_wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url("#{$font-path}/PlusJakartaSans-Italic-VariableFont_wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: italic;
+}
 
 // Our variables
-$base-font-family: "PT Sans", Helvetica, Arial, sans-serif;
-$base-font-size:   16px;
+$base-font-family: "Plus Jakarta Sans", "PT Sans", Helvetica, Arial, sans-serif;
+$code-font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+$base-font-size:   18px;
 $base-font-weight: 400;
 $small-font-size:  $base-font-size * 0.875;
-$base-line-height: 1.5;
+$base-line-height: 1.6;
 
 $spacing-unit:     30px;
 
-$text-color:       #4A4A4A;
-$background-color: #e5e4e6;
-$brand-color:      #0057B8;
-$site-title-hover-color: #444;
+// Colors resolve at runtime so the page follows the reader's light or dark
+// system setting. The light and dark palettes live in `_sass/_theme.scss`.
+$text-color:       var(--text-color);
+$background-color: var(--background-color);
+$brand-color:      var(--brand-color);
+$brand-hover-color: var(--brand-hover-color);
+$site-title-hover-color: var(--site-title-hover-color);
+$code-background-color: var(--code-background-color);
+$related-posts-background-color: var(--related-posts-background-color);
+$pagination-color: var(--pagination-color);
+$pagination-hover-text-color: var(--pagination-hover-text-color);
 
-$grey-color:       #828282;
-$grey-color-light: lighten($grey-color, 40%);
-$grey-color-dark:  darken($grey-color, 25%);
+$grey-color:       var(--grey-color);
+$grey-color-light: var(--grey-color-light);
+$grey-color-dark:  var(--grey-color-dark);
+
+$table-text-color: var(--table-text-color);
+$table-stripe-color: var(--table-stripe-color);
+$table-header-color: var(--table-header-color);
+$table-header-border-color: var(--table-header-border-color);
+$table-header-border-bottom-color: var(--table-header-border-bottom-color);
 $table-text-align: left !default;
 
 // Width of the content area
-$content-width:    800px;
+// 700px minus padding keeps body text near 70 characters per line
+$content-width:    700px;
 
 $on-palm:          600px;
 $on-laptop:        800px;
@@ -49,6 +79,7 @@ $on-laptop:        800px;
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
+        "theme",
         "base",
         "layout",
         "syntax-highlighting",

@@ -1,0 +1,106 @@
+/**
+ * Color themes
+ *
+ * Light is the default. Dark applies when the reader's system prefers it.
+ */
+:root {
+  color-scheme: light dark;
+
+  --text-color: #4A4A4A;
+  --background-color: #e5e4e6;
+  --brand-color: #0057B8;
+  --brand-hover-color: #00336C;
+  --site-title-hover-color: #444;
+  --code-background-color: #eef;
+  --highlight-background-color: #fff;
+  --related-posts-background-color: #f6f6f6;
+  --pagination-color: #000;
+  --pagination-hover-text-color: #fff;
+
+  // Meets WCAG AA (4.5:1) on the background
+  --grey-color: #636363;
+  --grey-color-light: #e8e8e8;
+  --grey-color-dark: #424242;
+
+  --table-text-color: #787878;
+  --table-stripe-color: #F7F7F7;
+  --table-header-color: #F0F0F0;
+  --table-header-border-color: #DEDEDE;
+  --table-header-border-bottom-color: #C9C9C9;
+
+  --syntax-comment: #998;
+  --syntax-muted: #999;
+  --syntax-error: #a00;
+  --syntax-error-text: #a61717;
+  --syntax-error-background: #e3d2d2;
+  --syntax-diff-text: #000;
+  --syntax-deleted-background: #fdd;
+  --syntax-deleted-strong-background: #faa;
+  --syntax-inserted-background: #dfd;
+  --syntax-inserted-strong-background: #afa;
+  --syntax-output: #888;
+  --syntax-prompt: #555;
+  --syntax-subheading: #aaa;
+  --syntax-type: #458;
+  --syntax-number: #099;
+  --syntax-string: #d14;
+  --syntax-teal: #008080;
+  --syntax-builtin: #0086B3;
+  --syntax-entity: #800080;
+  --syntax-function: #900;
+  --syntax-tag: #000080;
+  --syntax-whitespace: #bbb;
+  --syntax-regex: #009926;
+  --syntax-symbol: #990073;
+}
+
+// Every text color meets WCAG AA (4.5:1) on its background in dark mode
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text-color: #D1D1D6;
+    --background-color: #1C1C1E;
+    --brand-color: #5AA9F7;
+    --brand-hover-color: #8DC4FA;
+    --site-title-hover-color: #E5E5EA;
+    --code-background-color: #2C2C2E;
+    --highlight-background-color: #2C2C2E;
+    --related-posts-background-color: #2C2C2E;
+    --pagination-color: #D1D1D6;
+    --pagination-hover-text-color: #1C1C1E;
+
+    --grey-color: #8E8E93;
+    --grey-color-light: #3A3A3C;
+    --grey-color-dark: #AEAEB2;
+
+    --table-text-color: #B5B5BA;
+    --table-stripe-color: #252527;
+    --table-header-color: #2C2C2E;
+    --table-header-border-color: #48484A;
+    --table-header-border-bottom-color: #636366;
+
+    --syntax-comment: #9DA5B4;
+    --syntax-muted: #98989D;
+    --syntax-error: #FF7B72;
+    --syntax-error-text: #FFA198;
+    --syntax-error-background: #5A1E1E;
+    --syntax-diff-text: #E5E5EA;
+    --syntax-deleted-background: #4B1C1F;
+    --syntax-deleted-strong-background: #6E2A2E;
+    --syntax-inserted-background: #1D3B26;
+    --syntax-inserted-strong-background: #2A5636;
+    --syntax-output: #98989D;
+    --syntax-prompt: #AEAEB2;
+    --syntax-subheading: #98989D;
+    --syntax-type: #79B8FF;
+    --syntax-number: #56D4DD;
+    --syntax-string: #FF9492;
+    --syntax-teal: #4FD1C5;
+    --syntax-builtin: #6CB6FF;
+    --syntax-entity: #D2A8FF;
+    --syntax-function: #FFA657;
+    --syntax-tag: #85E89D;
+    --syntax-whitespace: #636366;
+    --syntax-regex: #7EE787;
+    --syntax-symbol: #F778BA;
+  }
+}

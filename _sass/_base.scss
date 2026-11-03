@@ -26,6 +26,7 @@ body {
   font-feature-settings: "kern" 1;
   font-kerning: normal;
   text-rendering: optimizeLegibility;
+  font-optical-sizing: auto;
 }
 
 @include media-query($on-palm) {
@@ -42,6 +43,12 @@ p, blockquote, pre,
 ul, ol, dl, figure,
 %vertical-rhythm {
   margin-bottom: $spacing-unit / 2;
+}
+
+.post-content {
+  p, ul {
+    margin-bottom: $base-font-size * 1.25;
+  }
 }
 
 /**
@@ -75,6 +82,10 @@ ul, ol {
 }
 
 li {
+  margin-bottom: $spacing-unit / 3;
+}
+
+li {
   > ul,
   > ol {
     margin-bottom: 0;
@@ -84,16 +95,46 @@ li {
 /**
  * Headings
  */
-h1, h2, h3, h4, h5, h6 {
-  font-weight: 600;
-}
-
-h2 {
-  font-size: 1.25rem;
+h1, h2 {
+  font-weight: 700;
 }
 
 h3, h4 {
+  font-weight: 600;
+}
+
+h5, h6 {
+  font-weight: 500;
+}
+
+h1 {
+  font-size: 2.22rem;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 1.78rem;
+  line-height: 1.3;
+}
+
+h3 {
+  font-size: 1.33rem;
+  line-height: 1.4;
+}
+
+h4 {
+  font-size: 1.11rem;
+  line-height: 1.5;
+}
+
+h5 {
   font-size: 1rem;
+  line-height: 1.6;
+}
+
+h6 {
+  font-size: 0.89rem;
+  line-height: 1.6;
 }
 
 /**
@@ -104,7 +145,7 @@ a {
   text-decoration: none;
 
   &:hover {
-    color: darken($brand-color, 15%);
+    color: $brand-hover-color;
   }
 }
 
@@ -117,7 +158,7 @@ blockquote {
     color: $grey-color;
     border-left: 4px solid $grey-color-light;
     padding-left: $spacing-unit / 2;
-    font-size: 18px;
+    font-size: $base-font-size + 2;
     letter-spacing: -1px;
     font-style: italic;
 
@@ -133,14 +174,15 @@ blockquote {
  */
 pre,
 code {
-    font-size: 15px;
+    font-family: $code-font-family;
+    font-size: $base-font-size - 2;
     border: 1px solid $grey-color-light;
     border-radius: 3px;
-    background-color: #eef;
+    background-color: $code-background-color;
 }
 
 code {
-    padding: 1px 5px;
+    padding: 2.5px 5px;
 }
 
 pre {
@@ -216,21 +258,21 @@ table {
   margin-bottom: $spacing-unit;
   width: 100%;
   text-align: $table-text-align;
-  color: lighten($text-color, 18%);
+  color: $table-text-color;
   border-collapse: collapse;
   border: 1px solid $grey-color-light;
   tr {
     &:nth-child(even) {
-      background-color: lighten($grey-color-light, 6%);
+      background-color: $table-stripe-color;
     }
   }
   th, td {
     padding: ($spacing-unit / 3) ($spacing-unit / 2);
   }
   th {
-    background-color: lighten($grey-color-light, 3%);
-    border: 1px solid darken($grey-color-light, 4%);
-    border-bottom-color: darken($grey-color-light, 12%);
+    background-color: $table-header-color;
+    border: 1px solid $table-header-border-color;
+    border-bottom-color: $table-header-border-bottom-color;
   }
   td {
     border: 1px solid $grey-color-light;
