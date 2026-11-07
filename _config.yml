@@ -15,6 +15,9 @@ description: > # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://yourdomain.com" # the base hostname & protocol for your site
 
+# Default color theme: light or dark. Readers can switch it with the header toggle.
+color_theme: light
+
 social_sharing: true
 github_username:  jekyll
 google_analytic_id:

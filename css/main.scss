@@ -30,8 +30,8 @@ $base-line-height: 1.6;
 
 $spacing-unit:     30px;
 
-// Colors resolve at runtime so the page follows the reader's light or dark
-// system setting. The light and dark palettes live in `_sass/_theme.scss`.
+// Colors resolve at runtime so the theme toggle can switch between light and
+// dark. The light and dark palettes live in `_sass/_theme.scss`.
 $text-color:       var(--text-color);
 $background-color: var(--background-color);
 $brand-color:      var(--brand-color);

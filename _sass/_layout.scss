@@ -27,6 +27,58 @@
     }
 }
 
+.theme-toggle {
+    float: right;
+    width: 36px;
+    height: 36px;
+    margin: 10px 0 0 20px;
+    padding: 8px;
+    border: 1px solid $grey-color-light;
+    border-radius: 5px;
+    background: none;
+    color: $grey-color-dark;
+    cursor: pointer;
+
+    &:hover {
+        color: $brand-color;
+    }
+
+    &:focus-visible {
+        outline: 2px solid $brand-color;
+        outline-offset: 2px;
+    }
+
+    svg {
+        display: block;
+        width: 18px;
+        height: 18px;
+        fill: none;
+        stroke: currentColor;
+        stroke-width: 2;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+    }
+
+    // Show the icon of the theme that a click switches to
+    .theme-toggle-sun {
+        display: none;
+    }
+
+    [data-theme="dark"] & {
+        .theme-toggle-moon {
+            display: none;
+        }
+        .theme-toggle-sun {
+            display: block;
+        }
+    }
+
+    // Leave room for the absolutely positioned mobile menu icon
+    @include media-query($on-palm) {
+        margin-right: 48px;
+    }
+}
+
 .site-nav {
     float: right;
     line-height: 56px;

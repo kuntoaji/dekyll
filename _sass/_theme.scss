@@ -1,10 +1,11 @@
 /**
  * Color themes
  *
- * Light is the default. Dark applies when the reader's system prefers it.
+ * The html element's data-theme attribute picks the palette. `color_theme` in
+ * _config.yml sets the default, and the header toggle overrides it.
  */
 :root {
-  color-scheme: light dark;
+  color-scheme: light;
 
   --text-color: #4A4A4A;
   --background-color: #e5e4e6;
@@ -55,52 +56,52 @@
 }
 
 // Every text color meets WCAG AA (4.5:1) on its background in dark mode
-@media (prefers-color-scheme: dark) {
-  :root {
-    --text-color: #D1D1D6;
-    --background-color: #1C1C1E;
-    --brand-color: #5AA9F7;
-    --brand-hover-color: #8DC4FA;
-    --site-title-hover-color: #E5E5EA;
-    --code-background-color: #2C2C2E;
-    --highlight-background-color: #2C2C2E;
-    --related-posts-background-color: #2C2C2E;
-    --pagination-color: #D1D1D6;
-    --pagination-hover-text-color: #1C1C1E;
+:root[data-theme="dark"] {
+  color-scheme: dark;
 
-    --grey-color: #8E8E93;
-    --grey-color-light: #3A3A3C;
-    --grey-color-dark: #AEAEB2;
+  --text-color: #D1D1D6;
+  --background-color: #1C1C1E;
+  --brand-color: #5AA9F7;
+  --brand-hover-color: #8DC4FA;
+  --site-title-hover-color: #E5E5EA;
+  --code-background-color: #2C2C2E;
+  --highlight-background-color: #2C2C2E;
+  --related-posts-background-color: #2C2C2E;
+  --pagination-color: #D1D1D6;
+  --pagination-hover-text-color: #1C1C1E;
 
-    --table-text-color: #B5B5BA;
-    --table-stripe-color: #252527;
-    --table-header-color: #2C2C2E;
-    --table-header-border-color: #48484A;
-    --table-header-border-bottom-color: #636366;
+  --grey-color: #8E8E93;
+  --grey-color-light: #3A3A3C;
+  --grey-color-dark: #AEAEB2;
 
-    --syntax-comment: #9DA5B4;
-    --syntax-muted: #98989D;
-    --syntax-error: #FF7B72;
-    --syntax-error-text: #FFA198;
-    --syntax-error-background: #5A1E1E;
-    --syntax-diff-text: #E5E5EA;
-    --syntax-deleted-background: #4B1C1F;
-    --syntax-deleted-strong-background: #6E2A2E;
-    --syntax-inserted-background: #1D3B26;
-    --syntax-inserted-strong-background: #2A5636;
-    --syntax-output: #98989D;
-    --syntax-prompt: #AEAEB2;
-    --syntax-subheading: #98989D;
-    --syntax-type: #79B8FF;
-    --syntax-number: #56D4DD;
-    --syntax-string: #FF9492;
-    --syntax-teal: #4FD1C5;
-    --syntax-builtin: #6CB6FF;
-    --syntax-entity: #D2A8FF;
-    --syntax-function: #FFA657;
-    --syntax-tag: #85E89D;
-    --syntax-whitespace: #636366;
-    --syntax-regex: #7EE787;
-    --syntax-symbol: #F778BA;
-  }
+  --table-text-color: #B5B5BA;
+  --table-stripe-color: #252527;
+  --table-header-color: #2C2C2E;
+  --table-header-border-color: #48484A;
+  --table-header-border-bottom-color: #636366;
+
+  --syntax-comment: #9DA5B4;
+  --syntax-muted: #98989D;
+  --syntax-error: #FF7B72;
+  --syntax-error-text: #FFA198;
+  --syntax-error-background: #5A1E1E;
+  --syntax-diff-text: #E5E5EA;
+  --syntax-deleted-background: #4B1C1F;
+  --syntax-deleted-strong-background: #6E2A2E;
+  --syntax-inserted-background: #1D3B26;
+  --syntax-inserted-strong-background: #2A5636;
+  --syntax-output: #98989D;
+  --syntax-prompt: #AEAEB2;
+  --syntax-subheading: #98989D;
+  --syntax-type: #79B8FF;
+  --syntax-number: #56D4DD;
+  --syntax-string: #FF9492;
+  --syntax-teal: #4FD1C5;
+  --syntax-builtin: #6CB6FF;
+  --syntax-entity: #D2A8FF;
+  --syntax-function: #FFA657;
+  --syntax-tag: #85E89D;
+  --syntax-whitespace: #636366;
+  --syntax-regex: #7EE787;
+  --syntax-symbol: #F778BA;
 }
