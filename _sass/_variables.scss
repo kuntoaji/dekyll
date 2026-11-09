@@ -1,0 +1,56 @@
+/**
+ * Shared variables and mixins
+ */
+$base-font-family: "Plus Jakarta Sans", "PT Sans", Helvetica, Arial, sans-serif;
+$code-font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+$base-font-size:   18px;
+$base-font-weight: 400;
+$small-font-size:  $base-font-size * 0.875;
+$base-line-height: 1.6;
+
+$spacing-unit:     30px;
+
+// Colors resolve at runtime so the theme toggle can switch between light and
+// dark. The light and dark palettes live in `_sass/_theme.scss`.
+$text-color:       var(--text-color);
+$background-color: var(--background-color);
+$brand-color:      var(--brand-color);
+$brand-hover-color: var(--brand-hover-color);
+$site-title-hover-color: var(--site-title-hover-color);
+$code-background-color: var(--code-background-color);
+$related-posts-background-color: var(--related-posts-background-color);
+$pagination-color: var(--pagination-color);
+$pagination-hover-text-color: var(--pagination-hover-text-color);
+
+$grey-color:       var(--grey-color);
+$grey-color-light: var(--grey-color-light);
+$grey-color-dark:  var(--grey-color-dark);
+
+$table-text-color: var(--table-text-color);
+$table-stripe-color: var(--table-stripe-color);
+$table-header-color: var(--table-header-color);
+$table-header-border-color: var(--table-header-border-color);
+$table-header-border-bottom-color: var(--table-header-border-bottom-color);
+$table-text-align: left !default;
+
+// Width of the content area
+// 700px minus padding keeps body text near 70 characters per line
+$content-width:    700px;
+
+$on-palm:          600px;
+$on-laptop:        800px;
+
+
+
+// Use media queries like this:
+// @include media-query($on-palm) {
+//     .wrapper {
+//         padding-right: $spacing-unit / 2;
+//         padding-left: $spacing-unit / 2;
+//     }
+// }
+@mixin media-query($device) {
+    @media screen and (max-width: $device) {
+        @content;
+    }
+}
