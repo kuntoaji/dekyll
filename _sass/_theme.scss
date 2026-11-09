@@ -3,11 +3,15 @@
  *
  * The html element's data-theme attribute picks the palette. `color_theme` in
  * _config.yml sets the default, and the header toggle overrides it.
+ *
+ * dekyll and kaklabs share one palette. Every text color meets WCAG AA (4.5:1)
+ * on its background. Each mode gives its eight syntax accents one OKLCH
+ * lightness (0.50 light, 0.805 dark), so no token type looks louder than
+ * another. Dark accents reach APCA Lc 60 on the code background.
  */
 :root {
   color-scheme: light;
 
-  // Every text color meets WCAG AA (4.5:1) on its background in light mode
   --text-color: #1F1F22;
   --background-color: #FFFFFF;
   --brand-color: #995700;
@@ -20,88 +24,69 @@
   --pagination-hover-text-color: #FFFFFF;
 
   --grey-color: #6B6B70;
-  --grey-color-light: #DDDAD4;
+  --grey-color-light: #CFCAC2;
   --grey-color-dark: #806746;
 
   --table-text-color: #1F1F22;
   --table-stripe-color: #F5F3EF;
   --table-header-color: #F3F1ED;
-  --table-header-border-color: #DDDAD4;
-  --table-header-border-bottom-color: #C9C5BD;
+  --table-header-border-color: #CFCAC2;
+  --table-header-border-bottom-color: #BDB7AE;
 
-  --syntax-comment: #5F6973;
-  --syntax-muted: #56605F;
-  --syntax-error: #B8262A;
-  --syntax-error-text: #B8262A;
-  --syntax-error-background: #F6DEDC;
-  --syntax-diff-text: #1F1F22;
-  --syntax-deleted-background: #F6DEDC;
-  --syntax-deleted-strong-background: #EEC3BF;
-  --syntax-inserted-background: #E6EDD3;
-  --syntax-inserted-strong-background: #D3E0AE;
-  --syntax-output: #6B6B70;
-  --syntax-prompt: #56605F;
-  --syntax-subheading: #56605F;
-  --syntax-type: #806100;
-  --syntax-number: #586600;
-  --syntax-string: #586600;
-  --syntax-teal: #1A65A0;
-  --syntax-builtin: #1A65A0;
-  --syntax-entity: #5257AE;
-  --syntax-function: #2E2A26;
-  --syntax-tag: #806100;
-  --syntax-whitespace: #2E2A26;
-  --syntax-regex: #1A7069;
-  --syntax-symbol: #586600;
+  --syntax-comment: #606A74;
+  --syntax-base1: #56605F;
+  --syntax-red: #A03F3C;
+  --syntax-orange: #964C04;
+  --syntax-yellow: #7A6001;
+  --syntax-green: #40731A;
+  --syntax-cyan: #02736E;
+  --syntax-blue: #0568A4;
+  --syntax-violet: #6453A7;
+  --syntax-magenta: #954074;
+  --syntax-error-background: #FFE2DE;
+  --syntax-deleted-background: #FFE2DE;
+  --syntax-deleted-strong-background: #F6CECA;
+  --syntax-inserted-background: #E0EFD8;
+  --syntax-inserted-strong-background: #CDE0C3;
 }
 
-// Every text color meets WCAG AA (4.5:1) on its background in dark mode
 :root[data-theme="dark"] {
   color-scheme: dark;
 
-  --text-color: #D1D1D6;
+  --text-color: #D8D8DC;
   --background-color: #1C1C1E;
-  --brand-color: #5AA9F7;
-  --brand-hover-color: #8DC4FA;
-  --site-title-hover-color: #E5E5EA;
+  --brand-color: #F1AF57;
+  --brand-hover-color: #F8C885;
+  --site-title-hover-color: #CDBBA2;
   --code-background-color: #2C2C2E;
   --highlight-background-color: #2C2C2E;
   --related-posts-background-color: #2C2C2E;
-  --pagination-color: #D1D1D6;
+  --pagination-color: #D8D8DC;
   --pagination-hover-text-color: #1C1C1E;
 
-  --grey-color: #8E8E93;
-  --grey-color-light: #3A3A3C;
-  --grey-color-dark: #AEAEB2;
+  --grey-color: #A1A1A6;
+  --grey-color-light: #48484A;
+  --grey-color-dark: #BC9F7B;
 
-  --table-text-color: #B5B5BA;
+  --table-text-color: #D8D8DC;
   --table-stripe-color: #252527;
   --table-header-color: #2C2C2E;
   --table-header-border-color: #48484A;
   --table-header-border-bottom-color: #636366;
 
-  --syntax-comment: #9DA5B4;
-  --syntax-muted: #98989D;
-  --syntax-error: #FF7B72;
-  --syntax-error-text: #FFA198;
-  --syntax-error-background: #5A1E1E;
-  --syntax-diff-text: #E5E5EA;
-  --syntax-deleted-background: #4B1C1F;
-  --syntax-deleted-strong-background: #6E2A2E;
-  --syntax-inserted-background: #1D3B26;
-  --syntax-inserted-strong-background: #2A5636;
-  --syntax-output: #98989D;
-  --syntax-prompt: #AEAEB2;
-  --syntax-subheading: #98989D;
-  --syntax-type: #79B8FF;
-  --syntax-number: #56D4DD;
-  --syntax-string: #FF9492;
-  --syntax-teal: #4FD1C5;
-  --syntax-builtin: #6CB6FF;
-  --syntax-entity: #D2A8FF;
-  --syntax-function: #FFA657;
-  --syntax-tag: #85E89D;
-  --syntax-whitespace: #636366;
-  --syntax-regex: #7EE787;
-  --syntax-symbol: #F778BA;
+  --syntax-comment: #9BA6B1;
+  --syntax-base1: #B8BDC3;
+  --syntax-red: #F9A69F;
+  --syntax-orange: #F2AE80;
+  --syntax-yellow: #D8BD71;
+  --syntax-green: #A4CE8D;
+  --syntax-cyan: #69D4CD;
+  --syntax-blue: #87C6FC;
+  --syntax-violet: #BEB5FC;
+  --syntax-magenta: #EEA5CE;
+  --syntax-error-background: #492826;
+  --syntax-deleted-background: #492826;
+  --syntax-deleted-strong-background: #5E3532;
+  --syntax-inserted-background: #28391E;
+  --syntax-inserted-strong-background: #344A28;
 }

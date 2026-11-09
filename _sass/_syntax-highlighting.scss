@@ -1,5 +1,8 @@
 /**
  * Syntax highlighting styles
+ *
+ * dekyll and kaklabs use the same token-to-color mapping. The colors live in
+ * `_sass/_theme.scss`.
  */
 .highlight {
     background: var(--highlight-background-color);
@@ -10,62 +13,62 @@
     }
 
     .c     { color: var(--syntax-comment); font-style: italic } // Comment
-    .err   { color: var(--syntax-error-text); background-color: var(--syntax-error-background) } // Error
-    .k     { font-weight: bold } // Keyword
-    .o     { font-weight: bold } // Operator
+    .cd    { color: var(--syntax-comment); font-style: italic } // Comment.Doc
     .cm    { color: var(--syntax-comment); font-style: italic } // Comment.Multiline
-    .cp    { color: var(--syntax-muted); font-weight: bold } // Comment.Preproc
     .c1    { color: var(--syntax-comment); font-style: italic } // Comment.Single
-    .cs    { color: var(--syntax-muted); font-weight: bold; font-style: italic } // Comment.Special
-    .gd    { color: var(--syntax-diff-text); background-color: var(--syntax-deleted-background) } // Generic.Deleted
-    .gd .x { color: var(--syntax-diff-text); background-color: var(--syntax-deleted-strong-background) } // Generic.Deleted.Specific
+    .cs    { color: var(--syntax-comment); font-style: italic } // Comment.Special
+    .cp    { color: var(--syntax-yellow) } // Comment.Preproc
+    .err   { color: var(--syntax-red); background-color: var(--syntax-error-background) } // Error
+    .k     { color: var(--syntax-violet) } // Keyword
+    .kn    { color: var(--syntax-violet) } // Keyword.Namespace
+    .kp    { color: var(--syntax-violet) } // Keyword.Pseudo
+    .kr    { color: var(--syntax-violet) } // Keyword.Reserved
+    .kv    { color: var(--syntax-violet) } // Keyword.Variable
+    .ow    { color: var(--syntax-violet) } // Operator.Word
+    .kc    { color: var(--syntax-orange) } // Keyword.Constant
+    .kd    { color: var(--syntax-orange) } // Keyword.Declaration
+    .kt    { color: var(--syntax-orange) } // Keyword.Type
+    .o     { color: var(--syntax-base1) } // Operator
+    .p     { color: var(--syntax-base1) } // Punctuation
+    .pi    { color: var(--syntax-base1) } // Punctuation.Indicator
+    .gd    { color: $text-color; background-color: var(--syntax-deleted-background) } // Generic.Deleted
+    .gd .x { color: $text-color; background-color: var(--syntax-deleted-strong-background) } // Generic.Deleted.Specific
+    .gi    { color: $text-color; background-color: var(--syntax-inserted-background) } // Generic.Inserted
+    .gi .x { color: $text-color; background-color: var(--syntax-inserted-strong-background) } // Generic.Inserted.Specific
     .ge    { font-style: italic } // Generic.Emph
-    .gr    { color: var(--syntax-error) } // Generic.Error
-    .gh    { color: var(--syntax-muted) } // Generic.Heading
-    .gi    { color: var(--syntax-diff-text); background-color: var(--syntax-inserted-background) } // Generic.Inserted
-    .gi .x { color: var(--syntax-diff-text); background-color: var(--syntax-inserted-strong-background) } // Generic.Inserted.Specific
-    .go    { color: var(--syntax-output) } // Generic.Output
-    .gp    { color: var(--syntax-prompt) } // Generic.Prompt
     .gs    { font-weight: bold } // Generic.Strong
-    .gu    { color: var(--syntax-subheading) } // Generic.Subheading
-    .gt    { color: var(--syntax-error) } // Generic.Traceback
-    .kc    { font-weight: bold } // Keyword.Constant
-    .kd    { font-weight: bold } // Keyword.Declaration
-    .kp    { font-weight: bold } // Keyword.Pseudo
-    .kr    { font-weight: bold } // Keyword.Reserved
-    .kt    { color: var(--syntax-type); font-weight: bold } // Keyword.Type
-    .m     { color: var(--syntax-number) } // Literal.Number
-    .s     { color: var(--syntax-string) } // Literal.String
-    .na    { color: var(--syntax-teal) } // Name.Attribute
-    .nb    { color: var(--syntax-builtin) } // Name.Builtin
-    .nc    { color: var(--syntax-type); font-weight: bold } // Name.Class
-    .no    { color: var(--syntax-teal) } // Name.Constant
-    .ni    { color: var(--syntax-entity) } // Name.Entity
-    .ne    { color: var(--syntax-function); font-weight: bold } // Name.Exception
-    .nf    { color: var(--syntax-function); font-weight: bold } // Name.Function
-    .nn    { color: var(--syntax-prompt) } // Name.Namespace
-    .nt    { color: var(--syntax-tag) } // Name.Tag
-    .nv    { color: var(--syntax-teal) } // Name.Variable
-    .ow    { font-weight: bold } // Operator.Word
-    .w     { color: var(--syntax-whitespace) } // Text.Whitespace
-    .mf    { color: var(--syntax-number) } // Literal.Number.Float
-    .mh    { color: var(--syntax-number) } // Literal.Number.Hex
-    .mi    { color: var(--syntax-number) } // Literal.Number.Integer
-    .mo    { color: var(--syntax-number) } // Literal.Number.Oct
-    .sb    { color: var(--syntax-string) } // Literal.String.Backtick
-    .sc    { color: var(--syntax-string) } // Literal.String.Char
-    .sd    { color: var(--syntax-string) } // Literal.String.Doc
-    .s2    { color: var(--syntax-string) } // Literal.String.Double
-    .se    { color: var(--syntax-string) } // Literal.String.Escape
-    .sh    { color: var(--syntax-string) } // Literal.String.Heredoc
-    .si    { color: var(--syntax-string) } // Literal.String.Interpol
-    .sx    { color: var(--syntax-string) } // Literal.String.Other
-    .sr    { color: var(--syntax-regex) } // Literal.String.Regex
-    .s1    { color: var(--syntax-string) } // Literal.String.Single
-    .ss    { color: var(--syntax-symbol) } // Literal.String.Symbol
-    .bp    { color: var(--syntax-muted) } // Name.Builtin.Pseudo
-    .vc    { color: var(--syntax-teal) } // Name.Variable.Class
-    .vg    { color: var(--syntax-teal) } // Name.Variable.Global
-    .vi    { color: var(--syntax-teal) } // Name.Variable.Instance
-    .il    { color: var(--syntax-number) } // Literal.Number.Integer.Long
+    .gr    { color: var(--syntax-red) } // Generic.Error
+    .gt    { color: var(--syntax-red) } // Generic.Traceback
+    .gh    { color: var(--syntax-blue); font-weight: bold } // Generic.Heading
+    .gu    { color: var(--syntax-blue); font-weight: bold } // Generic.Subheading
+    .go    { color: var(--syntax-base1) } // Generic.Output
+    .gp    { color: var(--syntax-base1); font-weight: bold } // Generic.Prompt
+    .s     { color: var(--syntax-green) } // Literal.String
+    .sb    { color: var(--syntax-green) } // Literal.String.Backtick
+    .sc    { color: var(--syntax-green) } // Literal.String.Char
+    .sd    { color: var(--syntax-green) } // Literal.String.Doc
+    .s1    { color: var(--syntax-green) } // Literal.String.Single
+    .s2    { color: var(--syntax-green) } // Literal.String.Double
+    .sh    { color: var(--syntax-green) } // Literal.String.Heredoc
+    .sx    { color: var(--syntax-green) } // Literal.String.Other
+    .se    { color: var(--syntax-magenta) } // Literal.String.Escape
+    .si    { color: var(--syntax-magenta) } // Literal.String.Interpol
+    .ss    { color: var(--syntax-magenta) } // Literal.String.Symbol
+    .sr    { color: var(--syntax-cyan) } // Literal.String.Regex
+    .m     { color: var(--syntax-cyan) } // Literal.Number
+    .mb    { color: var(--syntax-cyan) } // Literal.Number.Bin
+    .mf    { color: var(--syntax-cyan) } // Literal.Number.Float
+    .mh    { color: var(--syntax-cyan) } // Literal.Number.Hex
+    .mi    { color: var(--syntax-cyan) } // Literal.Number.Integer
+    .mo    { color: var(--syntax-cyan) } // Literal.Number.Oct
+    .mx    { color: var(--syntax-cyan) } // Literal.Number.Other
+    .il    { color: var(--syntax-cyan) } // Literal.Number.Integer.Long
+    .nc    { color: var(--syntax-yellow) } // Name.Class
+    .nn    { color: var(--syntax-yellow) } // Name.Namespace
+    .no    { color: var(--syntax-yellow) } // Name.Constant
+    .nt    { color: var(--syntax-yellow) } // Name.Tag
+    .na    { color: var(--syntax-blue) } // Name.Attribute
+    .nb    { color: var(--syntax-blue) } // Name.Builtin
+    .nf    { color: var(--syntax-blue) } // Name.Function
+    .ne    { color: var(--syntax-red) } // Name.Exception
 }
