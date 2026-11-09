@@ -7,52 +7,52 @@
 :root {
   color-scheme: light;
 
-  --text-color: #4A4A4A;
-  --background-color: #e5e4e6;
-  --brand-color: #0057B8;
-  --brand-hover-color: #00336C;
-  --site-title-hover-color: #444;
-  --code-background-color: #eef;
-  --highlight-background-color: #fff;
-  --related-posts-background-color: #f6f6f6;
-  --pagination-color: #000;
-  --pagination-hover-text-color: #fff;
+  // Every text color meets WCAG AA (4.5:1) on its background in light mode
+  --text-color: #1F1F22;
+  --background-color: #FFFFFF;
+  --brand-color: #995700;
+  --brand-hover-color: #7A4500;
+  --site-title-hover-color: #6B5638;
+  --code-background-color: #F3F1ED;
+  --highlight-background-color: #F3F1ED;
+  --related-posts-background-color: #F5F3EF;
+  --pagination-color: #1F1F22;
+  --pagination-hover-text-color: #FFFFFF;
 
-  // Meets WCAG AA (4.5:1) on the background
-  --grey-color: #636363;
-  --grey-color-light: #e8e8e8;
-  --grey-color-dark: #424242;
+  --grey-color: #6B6B70;
+  --grey-color-light: #DDDAD4;
+  --grey-color-dark: #806746;
 
-  --table-text-color: #787878;
-  --table-stripe-color: #F7F7F7;
-  --table-header-color: #F0F0F0;
-  --table-header-border-color: #DEDEDE;
-  --table-header-border-bottom-color: #C9C9C9;
+  --table-text-color: #1F1F22;
+  --table-stripe-color: #F5F3EF;
+  --table-header-color: #F3F1ED;
+  --table-header-border-color: #DDDAD4;
+  --table-header-border-bottom-color: #C9C5BD;
 
-  --syntax-comment: #998;
-  --syntax-muted: #999;
-  --syntax-error: #a00;
-  --syntax-error-text: #a61717;
-  --syntax-error-background: #e3d2d2;
-  --syntax-diff-text: #000;
-  --syntax-deleted-background: #fdd;
-  --syntax-deleted-strong-background: #faa;
-  --syntax-inserted-background: #dfd;
-  --syntax-inserted-strong-background: #afa;
-  --syntax-output: #888;
-  --syntax-prompt: #555;
-  --syntax-subheading: #aaa;
-  --syntax-type: #458;
-  --syntax-number: #099;
-  --syntax-string: #d14;
-  --syntax-teal: #008080;
-  --syntax-builtin: #0086B3;
-  --syntax-entity: #800080;
-  --syntax-function: #900;
-  --syntax-tag: #000080;
-  --syntax-whitespace: #bbb;
-  --syntax-regex: #009926;
-  --syntax-symbol: #990073;
+  --syntax-comment: #5F6973;
+  --syntax-muted: #56605F;
+  --syntax-error: #B8262A;
+  --syntax-error-text: #B8262A;
+  --syntax-error-background: #F6DEDC;
+  --syntax-diff-text: #1F1F22;
+  --syntax-deleted-background: #F6DEDC;
+  --syntax-deleted-strong-background: #EEC3BF;
+  --syntax-inserted-background: #E6EDD3;
+  --syntax-inserted-strong-background: #D3E0AE;
+  --syntax-output: #6B6B70;
+  --syntax-prompt: #56605F;
+  --syntax-subheading: #56605F;
+  --syntax-type: #806100;
+  --syntax-number: #586600;
+  --syntax-string: #586600;
+  --syntax-teal: #1A65A0;
+  --syntax-builtin: #1A65A0;
+  --syntax-entity: #5257AE;
+  --syntax-function: #2E2A26;
+  --syntax-tag: #806100;
+  --syntax-whitespace: #2E2A26;
+  --syntax-regex: #1A7069;
+  --syntax-symbol: #586600;
 }
 
 // Every text color meets WCAG AA (4.5:1) on its background in dark mode
