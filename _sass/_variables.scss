@@ -1,56 +1,78 @@
-/**
- * Shared variables and mixins
- */
-$base-font-family: "Plus Jakarta Sans", "PT Sans", Helvetica, Arial, sans-serif;
-$code-font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
-$base-font-size:   18px;
-$base-font-weight: 400;
-$small-font-size:  $base-font-size * 0.875;
-$base-line-height: 1.6;
+// Shared variables and mixins. Each partial loads this file with `@use`.
 
-$spacing-unit:     30px;
+$base-font-family: "Newsreader", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+$code-font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+$base-font-size: 19px;
+$base-font-weight: 400;
+$small-font-size: 0.8125rem;
+$base-line-height: 1.6;
+$spacing-unit: 30px;
 
 // Colors resolve at runtime so the theme toggle can switch between light and
 // dark. The light and dark palettes live in `_sass/_theme.scss`.
-$text-color:       var(--text-color);
+$text-color: var(--text-color);
+$text-muted-color: var(--text-muted-color);
 $background-color: var(--background-color);
-$brand-color:      var(--brand-color);
-$brand-hover-color: var(--brand-hover-color);
-$site-title-hover-color: var(--site-title-hover-color);
+$background-color-alt: var(--background-color-alt);
+$link-color: var(--link-color);
+$link-hover-color: var(--link-hover-color);
+$heading-color: var(--heading-color);
+$code-color: var(--code-color);
+$code-color-light: var(--code-color-light);
+$code-color-dark: var(--code-color-dark);
 $code-background-color: var(--code-background-color);
-$related-posts-background-color: var(--related-posts-background-color);
-$pagination-color: var(--pagination-color);
-$pagination-hover-text-color: var(--pagination-hover-text-color);
+$border-color: var(--border-color);
 
-$grey-color:       var(--grey-color);
-$grey-color-light: var(--grey-color-light);
-$grey-color-dark:  var(--grey-color-dark);
-
-$table-text-color: var(--table-text-color);
-$table-stripe-color: var(--table-stripe-color);
-$table-header-color: var(--table-header-color);
-$table-header-border-color: var(--table-header-border-color);
-$table-header-border-bottom-color: var(--table-header-border-bottom-color);
 $table-text-align: left !default;
 
-// Width of the content area
-// 700px minus padding keeps body text near 70 characters per line
-$content-width:    700px;
+// The page frame holds three columns: a rail for log metadata, the text
+// column, and spare room that code blocks and tables break out into.
+$frame-width: 68rem;
+$rail-width: 9.5rem;
+$text-width: 41rem;
+$column-gap: 2.5rem;
+$gutter: clamp(1rem, 4vw, 2rem);
 
-$on-palm:          600px;
-$on-laptop:        800px;
+// Corner cut at 60 degrees, taken from the hexagon logo
+$cut-x: 12px;
+$cut-y: 21px;
 
-
+$on-palm: 600px;
+$on-laptop: 960px;
 
 // Use media queries like this:
 // @include media-query($on-palm) {
-//     .wrapper {
-//         padding-right: calc($spacing-unit / 2);
-//         padding-left: calc($spacing-unit / 2);
+//     .frame {
+//         padding-right: 1rem;
 //     }
 // }
 @mixin media-query($device) {
-    @media screen and (max-width: $device) {
-        @content;
-    }
+  @media screen and (max-width: $device) {
+    @content;
+  }
+}
+
+// Small uppercase mono text for dates, entry numbers, and labels
+@mixin label {
+  font-family: $code-font-family;
+  font-size: $small-font-size;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+@mixin cut-corner {
+  clip-path: polygon(0 0, calc(100% - #{$cut-x}) 0, 100% $cut-y, 100% 100%, 0 100%);
+}
+
+// Two columns: the metadata rail and the body. One column on small screens.
+@mixin rail-grid {
+  display: grid;
+  grid-template-columns: $rail-width minmax(0, 1fr);
+  column-gap: $column-gap;
+
+  @include media-query($on-laptop) {
+    grid-template-columns: minmax(0, 1fr);
+  }
 }

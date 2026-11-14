@@ -4,34 +4,26 @@
  * The html element's data-theme attribute picks the palette. `color_theme` in
  * _config.yml sets the default, and the header toggle overrides it.
  *
- * dekyll and kaklabs share one palette. Every text color meets WCAG AA (4.5:1)
- * on its background. Each mode gives its eight syntax accents one OKLCH
- * lightness (0.50 light, 0.805 dark), so no token type looks louder than
- * another. Dark accents reach APCA Lc 60 on the code background.
+ * Paper and ink in the light theme, warm carbon in the dark theme, and one
+ * amber accent. Every text color meets WCAG AA (4.5:1) on its background.
+ * Each mode gives its eight syntax accents one OKLCH lightness (0.50 light,
+ * 0.805 dark), so no token type looks louder than another.
  */
 :root {
   color-scheme: light;
 
-  --text-color: #1F1F22;
-  --background-color: #FFFFFF;
-  --brand-color: #995700;
-  --brand-hover-color: #7A4500;
-  --site-title-hover-color: #6B5638;
-  --code-background-color: #F3F1ED;
-  --highlight-background-color: #F3F1ED;
-  --related-posts-background-color: #F5F3EF;
-  --pagination-color: #1F1F22;
-  --pagination-hover-text-color: #FFFFFF;
-
-  --grey-color: #6B6B70;
-  --grey-color-light: #CFCAC2;
-  --grey-color-dark: #806746;
-
-  --table-text-color: #1F1F22;
-  --table-stripe-color: #F5F3EF;
-  --table-header-color: #F3F1ED;
-  --table-header-border-color: #CFCAC2;
-  --table-header-border-bottom-color: #BDB7AE;
+  --text-color: #1C1A17;
+  --text-muted-color: #5F5A50;
+  --background-color: #F7F3EA;
+  --background-color-alt: #EEE8DA;
+  --link-color: #8A4B00;
+  --link-hover-color: #6B3A00;
+  --heading-color: #1C1A17;
+  --code-color: #5E4A2C;
+  --code-color-light: #2E2A26;
+  --code-color-dark: #806746;
+  --code-background-color: #EFE9DC;
+  --border-color: #D3CBB9;
 
   --syntax-comment: #606A74;
   --syntax-base1: #56605F;
@@ -53,26 +45,18 @@
 :root[data-theme="dark"] {
   color-scheme: dark;
 
-  --text-color: #D8D8DC;
-  --background-color: #1C1C1E;
-  --brand-color: #F1AF57;
-  --brand-hover-color: #F8C885;
-  --site-title-hover-color: #CDBBA2;
-  --code-background-color: #2C2C2E;
-  --highlight-background-color: #2C2C2E;
-  --related-posts-background-color: #2C2C2E;
-  --pagination-color: #D8D8DC;
-  --pagination-hover-text-color: #1C1C1E;
-
-  --grey-color: #A1A1A6;
-  --grey-color-light: #48484A;
-  --grey-color-dark: #BC9F7B;
-
-  --table-text-color: #D8D8DC;
-  --table-stripe-color: #252527;
-  --table-header-color: #2C2C2E;
-  --table-header-border-color: #48484A;
-  --table-header-border-bottom-color: #636366;
+  --text-color: #E4DFD5;
+  --text-muted-color: #A39C8F;
+  --background-color: #161412;
+  --background-color-alt: #211E1A;
+  --link-color: #F1AF57;
+  --link-hover-color: #F8C885;
+  --heading-color: #E4DFD5;
+  --code-color: #CDBBA2;
+  --code-color-light: #D8D8DC;
+  --code-color-dark: #BC9F7B;
+  --code-background-color: #211E1A;
+  --border-color: #3A352E;
 
   --syntax-comment: #9BA6B1;
   --syntax-base1: #B8BDC3;

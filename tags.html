@@ -5,10 +5,15 @@ permalink: tags.html
 show_in_nav: true
 ---
 
-<ul class="tag">
+<ul class="topics">
   {% for tag in site.tags %}
     {% assign tag_name = tag[0] | downcase %}
-    <li class="tag__item"><a href="{{ site.url }}/tag/{{ tag[0] }}/" title="{{ tag_name }}">#{{ tag_name }}</a></li>
+    <li>
+      <a class="topics__item" href="{{ site.url }}/tag/{{ tag[0] }}/" title="{{ tag_name }}">
+        <span>#{{ tag_name }}</span>
+        <span class="topics__count">{{ tag[1].size }}</span>
+      </a>
+    </li>
   {% endfor %}
 </ul>
 

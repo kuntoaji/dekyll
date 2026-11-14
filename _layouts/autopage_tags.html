@@ -2,5 +2,8 @@
 layout: default
 ---
 
-<h3>Posts with Tag <b>{% if page.autopages %}{{page.autopages.display_name | capitalize }}{% endif %}</b> Page {{page.pagination_info.curr_page}} of {{page.pagination_info.total_pages}}</h3>
+<header class="list-header">
+  <p class="list-header__kicker">Tag / {{ page.pagination_info.curr_page }} of {{ page.pagination_info.total_pages }}</p>
+  <h1>{% if page.autopages %}{{ page.autopages.display_name | capitalize }}{% endif %}</h1>
+</header>
 {% include posts.html %}

@@ -5,13 +5,16 @@ permalink: categories.html
 show_in_nav: true
 ---
 
-<p>
-  <ul class="category">
-    {% for category in site.categories %}
-      {% assign category_name = category[0] | downcase | replace: '-', ' ' %}
-      <li class="category__item"><a href="{{ site.url }}/category/{{ category[0] }}/" title="{{ category_name }}">{{ category_name }}</a></li>
-    {% endfor %}
-  </ul>
-</p>
+<ul class="topics">
+  {% for category in site.categories %}
+    {% assign category_name = category[0] | downcase | replace: '-', ' ' %}
+    <li>
+      <a class="topics__item" href="{{ site.url }}/category/{{ category[0] }}/" title="{{ category_name }}">
+        <span>{{ category_name }}</span>
+        <span class="topics__count">{{ category[1].size }}</span>
+      </a>
+    </li>
+  {% endfor %}
+</ul>
 
 <p>See all <a href="/tags.html">tags</a>.</p>

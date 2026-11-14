@@ -1,22 +1,14 @@
+{%- comment -%}
+  include.skip_first: true when the caller shows the first post itself
+{%- endcomment -%}
+{% assign listed_posts = paginator.posts %}
+{% if include.skip_first %}
+  {% assign listed_posts = paginator.posts | slice: 1, paginator.posts.size %}
+{% endif %}
 <div class="home">
 
-  <ul class="post-list">
-    {% for post in paginator.posts %}
-      <li>
-        <time class="post-meta" datetime="{{ post.date | date: "%Y-%m-%d %H:%M" }}">{{ post.date | date: "%b %-d, %Y" }}</time>
+  {% include post-list.html posts=listed_posts excerpts=true %}
 
-        <h1>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h1>
-
-        <p>
-          {{ post.excerpt }}
-        </p>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
   {% include pagination.html %}
 
 </div>

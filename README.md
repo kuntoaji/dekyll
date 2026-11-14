@@ -1,6 +1,6 @@
 # Dekyll
 
-Dekyll is a clean and minimal blog theme for Jekyll based on Minima theme, the Jekyll's default theme. All configurations are under `_config.yml` file.
+Dekyll is a blog theme for Jekyll with its own "Lab Log" design: a serif and mono type pair, a numbered log of entries, and light and dark themes. All configurations are under `_config.yml` file.
 By default, Dekyll does not compatible with Github Pages.
 You need to build locally and push to Github repository if you want to use Dekyll with Github Pages. In the future Dekyll will re-architecture as gem-based theme.
 

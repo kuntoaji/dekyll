@@ -1,5 +1,4 @@
 @use "variables" as *;
-@use "base";
 
 /**
  * Syntax highlighting styles
@@ -7,71 +6,83 @@
  * dekyll and kaklabs use the same token-to-color mapping. The colors live in
  * `_sass/_theme.scss`.
  */
-.highlight {
-    background: var(--highlight-background-color);
-    @extend %vertical-rhythm;
-
-    .highlighter-rouge & {
-      background: $code-background-color;
-    }
-
-    .c     { color: var(--syntax-comment); font-style: italic } // Comment
-    .cd    { color: var(--syntax-comment); font-style: italic } // Comment.Doc
-    .cm    { color: var(--syntax-comment); font-style: italic } // Comment.Multiline
-    .c1    { color: var(--syntax-comment); font-style: italic } // Comment.Single
-    .cs    { color: var(--syntax-comment); font-style: italic } // Comment.Special
-    .cp    { color: var(--syntax-yellow) } // Comment.Preproc
-    .err   { color: var(--syntax-red); background-color: var(--syntax-error-background) } // Error
-    .k     { color: var(--syntax-violet) } // Keyword
-    .kn    { color: var(--syntax-violet) } // Keyword.Namespace
-    .kp    { color: var(--syntax-violet) } // Keyword.Pseudo
-    .kr    { color: var(--syntax-violet) } // Keyword.Reserved
-    .kv    { color: var(--syntax-violet) } // Keyword.Variable
-    .ow    { color: var(--syntax-violet) } // Operator.Word
-    .kc    { color: var(--syntax-orange) } // Keyword.Constant
-    .kd    { color: var(--syntax-orange) } // Keyword.Declaration
-    .kt    { color: var(--syntax-orange) } // Keyword.Type
-    .o     { color: var(--syntax-base1) } // Operator
-    .p     { color: var(--syntax-base1) } // Punctuation
-    .pi    { color: var(--syntax-base1) } // Punctuation.Indicator
-    .gd    { color: $text-color; background-color: var(--syntax-deleted-background) } // Generic.Deleted
-    .gd .x { color: $text-color; background-color: var(--syntax-deleted-strong-background) } // Generic.Deleted.Specific
-    .gi    { color: $text-color; background-color: var(--syntax-inserted-background) } // Generic.Inserted
-    .gi .x { color: $text-color; background-color: var(--syntax-inserted-strong-background) } // Generic.Inserted.Specific
-    .ge    { font-style: italic } // Generic.Emph
-    .gs    { font-weight: bold } // Generic.Strong
-    .gr    { color: var(--syntax-red) } // Generic.Error
-    .gt    { color: var(--syntax-red) } // Generic.Traceback
-    .gh    { color: var(--syntax-blue); font-weight: bold } // Generic.Heading
-    .gu    { color: var(--syntax-blue); font-weight: bold } // Generic.Subheading
-    .go    { color: var(--syntax-base1) } // Generic.Output
-    .gp    { color: var(--syntax-base1); font-weight: bold } // Generic.Prompt
-    .s     { color: var(--syntax-green) } // Literal.String
-    .sb    { color: var(--syntax-green) } // Literal.String.Backtick
-    .sc    { color: var(--syntax-green) } // Literal.String.Char
-    .sd    { color: var(--syntax-green) } // Literal.String.Doc
-    .s1    { color: var(--syntax-green) } // Literal.String.Single
-    .s2    { color: var(--syntax-green) } // Literal.String.Double
-    .sh    { color: var(--syntax-green) } // Literal.String.Heredoc
-    .sx    { color: var(--syntax-green) } // Literal.String.Other
-    .se    { color: var(--syntax-magenta) } // Literal.String.Escape
-    .si    { color: var(--syntax-magenta) } // Literal.String.Interpol
-    .ss    { color: var(--syntax-magenta) } // Literal.String.Symbol
-    .sr    { color: var(--syntax-cyan) } // Literal.String.Regex
-    .m     { color: var(--syntax-cyan) } // Literal.Number
-    .mb    { color: var(--syntax-cyan) } // Literal.Number.Bin
-    .mf    { color: var(--syntax-cyan) } // Literal.Number.Float
-    .mh    { color: var(--syntax-cyan) } // Literal.Number.Hex
-    .mi    { color: var(--syntax-cyan) } // Literal.Number.Integer
-    .mo    { color: var(--syntax-cyan) } // Literal.Number.Oct
-    .mx    { color: var(--syntax-cyan) } // Literal.Number.Other
-    .il    { color: var(--syntax-cyan) } // Literal.Number.Integer.Long
-    .nc    { color: var(--syntax-yellow) } // Name.Class
-    .nn    { color: var(--syntax-yellow) } // Name.Namespace
-    .no    { color: var(--syntax-yellow) } // Name.Constant
-    .nt    { color: var(--syntax-yellow) } // Name.Tag
-    .na    { color: var(--syntax-blue) } // Name.Attribute
-    .nb    { color: var(--syntax-blue) } // Name.Builtin
-    .nf    { color: var(--syntax-blue) } // Name.Function
-    .ne    { color: var(--syntax-red) } // Name.Exception
+.highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight, .highlight .w {
+  color: $code-color-light;
+  background-color: $code-background-color;
+}
+.highlight .c, .highlight .cd, .highlight .cm, .highlight .c1, .highlight .cs {
+  color: var(--syntax-comment);
+  font-style: italic;
+}
+.highlight .err {
+  color: var(--syntax-red);
+  background-color: var(--syntax-error-background);
+}
+.highlight .k, .highlight .kn, .highlight .kp, .highlight .kr, .highlight .kv, .highlight .ow {
+  color: var(--syntax-violet);
+}
+.highlight .kc, .highlight .kd, .highlight .kt {
+  color: var(--syntax-orange);
+}
+.highlight .o, .highlight .p, .highlight .pi {
+  color: var(--syntax-base1);
+}
+.highlight .gd {
+  color: $code-color-light;
+  background-color: var(--syntax-deleted-background);
+}
+.highlight .gd .x {
+  color: $code-color-light;
+  background-color: var(--syntax-deleted-strong-background);
+}
+.highlight .gi {
+  color: $code-color-light;
+  background-color: var(--syntax-inserted-background);
+}
+.highlight .gi .x {
+  color: $code-color-light;
+  background-color: var(--syntax-inserted-strong-background);
+}
+.highlight .ge {
+  font-style: italic;
+}
+.highlight .gs {
+  font-weight: bold;
+}
+.highlight .gr, .highlight .gt {
+  color: var(--syntax-red);
+}
+.highlight .gh, .highlight .gu {
+  color: var(--syntax-blue);
+  font-weight: bold;
+}
+.highlight .go {
+  color: var(--syntax-base1);
+}
+.highlight .gp {
+  color: var(--syntax-base1);
+  font-weight: bold;
+}
+.highlight .s, .highlight .sb, .highlight .sc, .highlight .sd, .highlight .s1, .highlight .s2, .highlight .sh, .highlight .sx {
+  color: var(--syntax-green);
+}
+.highlight .se, .highlight .si, .highlight .ss {
+  color: var(--syntax-magenta);
+}
+.highlight .sr {
+  color: var(--syntax-cyan);
+}
+.highlight .m, .highlight .mb, .highlight .mf, .highlight .mh, .highlight .mi, .highlight .mo, .highlight .mx, .highlight .il {
+  color: var(--syntax-cyan);
+}
+.highlight .cp, .highlight .nc, .highlight .nn, .highlight .no, .highlight .nt {
+  color: var(--syntax-yellow);
+}
+.highlight .na, .highlight .nb, .highlight .nf {
+  color: var(--syntax-blue);
+}
+.highlight .ne {
+  color: var(--syntax-red);
 }

@@ -1,0 +1,23 @@
+{%- comment -%}
+  The shared log list.
+  include.posts: the posts to list
+  include.excerpts: true to show an excerpt below each title
+{%- endcomment -%}
+<ol class="log">
+  {% for post in include.posts %}
+    <li class="log__row">
+      <div class="log__rail">
+        <span class="log__number">No. {% include entry-number.html post=post %}</span>
+        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>
+      </div>
+      <div class="log__body">
+        <h2 class="log__title">
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+        {% if include.excerpts %}
+          <p class="log__excerpt">{{ post.excerpt | strip_html | strip | truncate: 200 }}</p>
+        {% endif %}
+      </div>
+    </li>
+  {% endfor %}
+</ol>

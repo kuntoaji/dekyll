@@ -14,15 +14,25 @@
 $font-path: "../assets/fonts";
 
 @font-face {
-  font-family: "Plus Jakarta Sans";
-  src: url("#{$font-path}/PlusJakartaSans-VariableFont_wght.ttf") format("truetype");
-  font-weight: 100 900;
+  font-family: "Newsreader";
+  src: url("#{$font-path}/newsreader-latin-wght-normal.woff2") format("woff2");
+  font-weight: 200 800;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-  font-family: "Plus Jakarta Sans";
-  src: url("#{$font-path}/PlusJakartaSans-Italic-VariableFont_wght.ttf") format("truetype");
-  font-weight: 100 900;
+  font-family: "Newsreader";
+  src: url("#{$font-path}/newsreader-latin-wght-italic.woff2") format("woff2");
+  font-weight: 200 800;
   font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("#{$font-path}/jetbrains-mono-latin-wght-normal.woff2") format("woff2");
+  font-weight: 100 800;
+  font-style: normal;
+  font-display: swap;
 }

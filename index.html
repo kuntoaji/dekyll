@@ -4,4 +4,94 @@ pagination:
   enabled: true
 ---
 
-{% include posts.html %}
+{% if paginator.page == 1 %}
+  {% assign first_year = site.posts.last.date | date: "%Y" %}
+  {% assign latest = paginator.posts.first %}
+
+  <section class="masthead">
+    {% if latest %}
+      <p class="masthead__kicker">{{ site.posts.size }} {% if site.posts.size == 1 %}entry{% else %}entries{% endif %} since {{ first_year }}</p>
+    {% endif %}
+    <h1 class="masthead__title">{{ site.title }}</h1>
+    <p class="masthead__lede">{{ site.description }}</p>
+  </section>
+
+  {% if latest %}
+    <article class="featured">
+      <div class="featured__rail">
+        <span class="featured__flag">Latest</span>
+        <span>No. {% include entry-number.html post=latest %}</span>
+        <time datetime="{{ latest.date | date_to_xmlschema }}">{{ latest.date | date: "%b %-d, %Y" }}</time>
+      </div>
+      <div class="featured__body">
+        <h2 class="featured__title">
+          <a href="{{ latest.url | prepend: site.baseurl }}">{{ latest.title }}</a>
+        </h2>
+        <p class="featured__excerpt">{{ latest.excerpt | strip_html | strip | truncate: 260 }}</p>
+        <a class="button" href="{{ latest.url | prepend: site.baseurl }}">Read entry</a>
+      </div>
+    </article>
+  {% endif %}
+
+  {% include posts.html skip_first=true %}
+
+  {% assign years = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
+  {% assign busiest = 0 %}
+  {% for year in years %}
+    {% if year.size > busiest %}
+      {% assign busiest = year.size %}
+    {% endif %}
+  {% endfor %}
+
+  {% if years.size > 0 %}
+    <section class="index">
+      <h2 class="index__heading">Entries by year</h2>
+      <ol class="years" style="--busiest: {{ busiest }}">
+        {% for year in years %}
+          <li>
+            <a class="years__row" href="{{ site.baseurl }}/{{ year.name }}/" style="--count: {{ year.size }}">
+              <span class="years__name">{{ year.name }}</span>
+              <span class="years__bar" aria-hidden="true"></span>
+              <span class="years__count">{{ year.size }}</span>
+            </a>
+          </li>
+        {% endfor %}
+      </ol>
+    </section>
+  {% endif %}
+
+  {% assign topic_keys = "" | split: "" %}
+  {% for category in site.categories %}
+    {% assign key = category[1].size | plus: 1000 | append: "|" | append: category[0] %}
+    {% assign topic_keys = topic_keys | push: key %}
+  {% endfor %}
+  {% assign topic_keys = topic_keys | sort | reverse %}
+
+  {% if topic_keys.size > 0 %}
+    <section class="index">
+      <h2 class="index__heading">Entries by topic</h2>
+      <ul class="topics">
+        {% for key in topic_keys limit: 18 %}
+          {% assign parts = key | split: "|" %}
+          {% assign name = parts[1] %}
+          <li>
+            <a class="topics__item" href="{{ site.baseurl }}/category/{{ name | downcase }}/">
+              <span>{{ name | replace: '-', ' ' }}</span>
+              <span class="topics__count">{{ parts[0] | minus: 1000 }}</span>
+            </a>
+          </li>
+        {% endfor %}
+        <li>
+          <a class="topics__item topics__item--all" href="{{ site.baseurl }}/categories.html">All topics</a>
+        </li>
+      </ul>
+    </section>
+  {% endif %}
+{% else %}
+  <header class="list-header">
+    <p class="list-header__kicker">{{ paginator.page }} of {{ paginator.total_pages }}</p>
+    <h1>All entries</h1>
+  </header>
+
+  {% include posts.html %}
+{% endif %}

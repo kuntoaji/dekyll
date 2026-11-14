@@ -1,0 +1,11 @@
+{%- comment -%}
+  Prints the log number of `include.post`. Number 001 is the oldest post.
+{%- endcomment -%}
+{%- assign entry_number = "" -%}
+{%- for candidate in site.posts -%}
+  {%- if candidate.url == include.post.url -%}
+    {%- assign entry_number = site.posts.size | minus: forloop.index0 | prepend: "00" | slice: -3, 3 -%}
+    {%- break -%}
+  {%- endif -%}
+{%- endfor -%}
+{{- entry_number -}}

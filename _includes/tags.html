@@ -1,6 +1,7 @@
-<ul class="tag">
-  <li class="tag__item"><strong>Tags: </strong></li>
+{% if page.tags.size > 0 %}
+<ul class="tag" aria-label="Tags">
   {% for tag in page.tags %}
     <li class="tag__item"><a href="{{ site.url }}/tag/{{ tag | downcase }}" title="{{ tag }}">#{{ tag | replace: '-', ' ' }}</a></li>
   {% endfor %}
 </ul>
+{% endif %}

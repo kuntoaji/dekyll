@@ -1,28 +1,14 @@
-<div class="pagination">
+<nav class="entry-nav" aria-label="Entries">
   {% if page.next.url %}
-    <a href="{{ page.next.url }}" class="pagination__previous">
-        <svg class="pagination__icon" data-icon="chevronLeft" viewBox="0 0 32 32" style="fill:currentcolor">
-          <title>chevronLeft icon</title>
-          <path d="M20 1 L24 5 L14 16 L24 27 L20 31 L6 16 z"></path>
-        </svg>
-      <span class="pagination__previous-text">Previous</span>
+    <a href="{{ page.next.url | prepend: site.baseurl }}" class="entry-nav__link" rel="next">
+      <span class="label">Newer / No. {% include entry-number.html post=page.next %}</span>
+      <span class="entry-nav__title">{{ page.next.title }}</span>
     </a>
-  {% else %}
-    <span class="pagination__previous--edge">
-      <span class="pagination__previous-text">Previous</span>
-    </span>
   {% endif %}
   {% if page.previous.url %}
-    <a href="{{ page.previous.url }}" class="pagination__next">
-      <span class="pagination__next-text">Next</span>
-      <svg class="pagination__icon" data-icon="chevronRight" viewBox="0 0 32 32" style="fill:currentcolor">
-        <title>chevronRight icon</title>
-        <path d="M12 1 L26 16 L12 31 L8 27 L18 16 L8 5 z"></path>
-      </svg>
+    <a href="{{ page.previous.url | prepend: site.baseurl }}" class="entry-nav__link entry-nav__link--older" rel="prev">
+      <span class="label">Older / No. {% include entry-number.html post=page.previous %}</span>
+      <span class="entry-nav__title">{{ page.previous.title }}</span>
     </a>
-  {% else %}
-    <span class="pagination__next--edge">
-      <span class="pagination__next-text">Next</span>
-    </span>
   {% endif %}
-</div>
+</nav>
