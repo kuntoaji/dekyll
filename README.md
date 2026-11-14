@@ -4,7 +4,7 @@ Dekyll is a blog theme for Jekyll with its own "Lab Log" design: a serif and mon
 By default, Dekyll does not compatible with Github Pages.
 You need to build locally and push to Github repository if you want to use Dekyll with Github Pages. In the future Dekyll will re-architecture as gem-based theme.
 
-See [railsmine.net](https://www.railsmine.net) for demo.
+See [www.kaklabs.com](https://www.kaklabs.com) for demo.
 
 ## How to Run Dekyll on local machine
 
