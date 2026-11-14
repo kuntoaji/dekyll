@@ -1,13 +1,10 @@
-<div class="related-posts">
-  <h3>Related Posts</h3>
+{% if site.recent_posts and jekyll.environment == "production" %}
+<section class="related">
+  <header>
+    <h2 class="label">Recent Posts</h2>
+  </header>
 
-  <ul>
-    {% for post in site.related_posts limit:5 %}
-      <li>
-        <a href="{{ post.url }}">
-          {{ post.title }}
-        </a>
-      </li>
-    {% endfor %}
-  </ul>
-</div>
+  {% assign recent_posts = site.posts | slice: 0, 5 %}
+  {% include post-list.html posts=recent_posts excerpts=true %}
+</section>
+{% endif %}

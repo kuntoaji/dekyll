@@ -1,40 +1,21 @@
 <footer class="site-footer">
-
-  <div class="wrapper">
-
-    <h2 class="footer-heading">{{ site.title }}</h2>
-
-    <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-1">
-        <ul class="contact-list">
-          <li>{{ site.title }}</li>
-          <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col footer-col-2">
-        <ul class="social-media-list">
-          {% if site.github_username %}
-          <li>
-            {% include icon-github.html username=site.github_username %}
-          </li>
-          {% endif %}
-
-          {% if site.twitter.username %}
-          <li>
-            {% include icon-twitter.html username=site.twitter.username %}
-          </li>
-          {% endif %}
-        </ul>
-      </div>
-
-      <div class="footer-col footer-col-3">
-        <p>{{ site.description }}</p>
-        <small><a href="https://github.com/kuntoaji/dekyll">Dekyll</a> Theme By <a href="http://www.kaklabs.com">KAK Labs</a></small>
-      </div>
-
-    </div>
-
-  </div>
-
+  <section class="wrapper">
+    <p class="site-footer__colophon">
+      <span>{{ site.title }}{% if site.posts.size > 0 %} / since {{ site.posts.last.date | date: "%Y" }}{% endif %}</span>
+    </p>
+    <ul class="footer-links">
+      <li>
+        <a href="{{ "/categories.html" | prepend: site.baseurl }}">Categories</a>
+      </li>
+      <li>
+        <a href="{{ "/tags.html" | prepend: site.baseurl }}">Tags</a>
+      </li>
+      <li>
+        <a href="{{ "/feed.xml" | prepend: site.baseurl }}">RSS</a>
+      </li>
+      <li>
+        <a href="https://github.com/kuntoaji/dekyll" target="_blank" rel="noopener">Dekyll theme</a>
+      </li>
+    </ul>
+  </section>
 </footer>

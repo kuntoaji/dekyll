@@ -19,11 +19,10 @@ See [railsmine.net](https://www.railsmine.net) for demo.
 * Support Jekyll 4
 * No Javascript required
 * CSS Compression
-* Related articles
+* Recent posts below each post (optional)
 * Responsive
 * Support pagination
 * Sitemap with Last-Modified-At
-* Social media sharing buttons
 * Google Analytic and Disqus
 * Jekyll SEO tag
 * Pagination on Category and Tag pages

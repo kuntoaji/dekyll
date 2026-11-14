@@ -18,8 +18,9 @@ url: "http://yourdomain.com" # the base hostname & protocol for your site
 # Default color theme: light or dark. Readers can switch it with the header toggle.
 color_theme: light
 
-social_sharing: true
-github_username:  jekyll
+# Show a Recent Posts block below each post (production builds only)
+recent_posts: false
+
 google_analytic_id:
 disqus_name:
 permalink: /:year/:month/:day/:title:output_ext

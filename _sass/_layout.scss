@@ -108,39 +108,47 @@
  * Site footer
  */
 .site-footer {
-  padding: 2rem 0 2.5rem;
   border-top: 1px solid $border-color;
+
+  > .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem 2rem;
+    padding-top: 2rem;
+    padding-bottom: 2.5rem;
+  }
+
+  &__colophon {
+    @include label;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin: 0;
+    color: $text-muted-color;
+  }
 }
 
-.footer-heading {
+.footer-links {
   @include label;
-  margin-bottom: 1.25rem;
-  color: $text-color;
-}
-
-.footer-col-wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr 2fr;
-  gap: 1rem 2rem;
-  font-size: 0.9rem;
-  color: $text-muted-color;
-
-  p {
-    margin-bottom: 0.5rem;
-  }
-
-  @include media-query($on-palm) {
-    grid-template-columns: minmax(0, 1fr);
-  }
-}
-
-.contact-list,
-.social-media-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.4rem;
   margin: 0;
   list-style: none;
 
   li {
-    margin: 0 0 0.25rem;
+    margin: 0;
+  }
+
+  a {
+    color: $text-color;
+    text-decoration: none;
+
+    &:hover {
+      color: $link-color;
+    }
   }
 }
 
@@ -607,9 +615,8 @@ figure.highlight > pre {
 /**
  * Newer and older entry links below a post
  */
-.share-buttons,
 .entry-nav,
-.related-posts,
+.related,
 #disqus_thread {
   max-width: $text-width;
   margin-left: calc(#{$rail-width} + #{$column-gap});
